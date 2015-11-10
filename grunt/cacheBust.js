@@ -1,0 +1,25 @@
+// Cache bust static assets using content hashing
+module.exports = {
+	options: {
+		encoding: 'utf8',
+		algorithm: 'md5',
+		length: 16,
+		// ignorePatterns: ['ico'],
+		deleteOriginals: true,
+		rename: true,
+		filters: [{
+			// 'img':
+			// function() {
+			// 	return this.attribs['data-src'];
+			// }
+		}]
+	},
+	assets: {
+		files: [{
+			expand: true,
+        	cwd: '<%= theme.html %>',
+        	baseDir: '<%= theme.html %>',
+			src: ['*.html']
+		}]
+	}
+}

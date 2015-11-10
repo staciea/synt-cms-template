@@ -1,0 +1,66 @@
+default:
+    description: 'Default dev task'
+    tasks:
+        - 'newer:coffee'
+        - 'newer:concat'
+        - 'newer:sass'
+        - 'newer:stylus'
+        - 'newer:jade'
+        # - 'newer:imagemin'
+        - 'sync'
+        - 'watch'
+
+
+bower-dev:
+    description: 'Move bower dependencies to main dev folders'
+    tasks:
+        - 'bower'
+        - 'clean:gitkeep'
+        # - 'clean:bower'
+
+
+regen:
+    description: 'Regenerate project by running all tasks without newer directive'
+    tasks:
+        - 'coffee'
+        - 'concat'
+        - 'sass'
+        - 'stylus'
+        - 'jade'
+        # - 'imagemin'
+        - 'sync'
+        - 'clean:build'
+
+
+build:
+    description: 'Default build task'
+    tasks:
+        - 'processhtml'
+        - 'cmq'
+        - 'autoprefixer'
+        - 'csscomb'
+        - 'uglify'
+        - 'csso'
+        - 'clean:debug'
+        # - 'cacheBust'
+
+
+build-deploy:
+    description: 'Commit theme folder and push changes to remote'
+    tasks:
+        - 'shell:buildDeploy'
+
+zip:
+    description: 'Creates archive with static theme'
+    tasks:
+        - 'compress'
+
+server:
+    description: 'Run server for static theme'
+    tasks:
+        - 'browserSync'
+
+sprite:
+    description: 'Sprite creation task. Should be configured before running'
+    tasks:
+        - 'sprite'
