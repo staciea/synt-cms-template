@@ -2,7 +2,7 @@
 module.exports = {
 	main: {
 		files: ['<%= theme.html %>/*.html',
-				'<%= theme.sass %>/*.sass',
+				'<%= theme.sass %>/*.{sass, scss}',
 				'<%= theme.stylus %>/*.styl',
 				'<%= theme.css %>/*.css',
 				'<%= theme.coffee %>/**/*.coffee',

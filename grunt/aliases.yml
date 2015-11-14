@@ -40,6 +40,7 @@ build:
         - 'csscomb'
         - 'uglify'
         - 'csso'
+        - 'clean:dev'
         # - 'cacheBust'
 
 
@@ -51,7 +52,7 @@ deploy:
 zip:
     description: 'Creates archive with static theme'
     tasks:
-        - 'compress'
+        - 'compress:theme'
 
 server:
     description: 'Run server for static theme'

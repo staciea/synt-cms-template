@@ -1,6 +1,6 @@
 // Run shell commands
 module.exports = {
-	buildDeploy: {
+	deploy: {
 		command: 'rake deploy'
 	}
 }

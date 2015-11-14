@@ -2,7 +2,7 @@
 module.exports = {
 	main: {
 		files: [{
-			src: ['<%= theme.js %>/*.js', '!<%= theme.js %>/assembled.js', '!<%= theme.js %>/assembled.min.js'],
+			src: ['<%= theme.js %>/*.js', '!<%= theme.js %>/assembled.js', '!<%= theme.js %>/assembled.min.js', '!<%= theme.js %>/live.js'],
 			dest: '<%= theme.js %>/assembled.js'
 		}]
 	},

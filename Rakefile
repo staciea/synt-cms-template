@@ -1,9 +1,3 @@
-# Example of deploy script. It means that dev and build folders are different branches
-# and deploy will fix changes by committing them and push to the appropriate repos.
-
-# build-deploy task commit and push only build version
-# deploy task commit and push dev version
-
 require "rubygems"
 
 desc "Deploy build version"

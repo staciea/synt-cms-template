@@ -7,7 +7,7 @@ module.exports = {
 		files:[{
 			expand: true,
 			cwd: '<%= theme.css %>/',
-			src: ['**/*.css', '!*.min.css'],
+			src: ['*.css', '!*.min.css'],
 			dest: '<%= theme.css %>/'
 		}]
 	}

@@ -20,9 +20,9 @@ module.exports = function(grunt) {
 			// Zip result
 			zip: {
 				main: 'zip',
-				theme: '<%= zip.main %>/theme.zip',
-				dev: '<%= zip.main %>/dev.zip'
+				theme: '<%= zip.main %>/theme.zip'
 			},
+			// Server path
 			server: {
 				main: 'theme',
 				files: '<%= server.main %>'

@@ -2,7 +2,7 @@
 
 Template with cms adjusted structure, based on [front-end-scaffold](https://github.com/orlovmax/front-end-scaffold), with common used technologies and tools.
 
-Please note, this README relates to Grunt template that placed in master folder, if you want to use Gulp template  - you can find it in gulp branch of this repository.
+Please note, this README relates to Grunt template that placed in `master` folder, if you want to use Gulp template  - you can find it in `gulp` branch of this repository.
 
 ## Contents
 * [Folder structure](#folder-and-file-structure)
@@ -36,20 +36,20 @@ Please note, this README relates to Grunt template that placed in master folder,
 ├──grunt                                       * grunt tasks
 |   ├── task.js
 │   └── aliases.yml 
-├── test_screenshots
-└── theme
-	├── favicon.ico
+├── test_screenshots                           * Responsive test screenshots
+├── zip                                        * Zipped theme bundle
+└── theme                                      * main theme folder
 	├── index.html
-	├── robots.txt
-	├── screenshot.jpg
-	├── style.css
 	└── static
 		├── blocks                             * Website blocks library
 		│   └── block
-		│       ├── block.scss
+		│       ├── block.sass
+		│       ├── block.styl
 		│       └── block.jade
 		├── css                                * compiled css
+		│   ├── custom.css
 		│   ├── ie.css
+		│   ├── noscript.css
 		│   └── screen.css
 		├── images                             * image sources
 		│   └── *.png, *.jpg, *.gif
@@ -57,21 +57,44 @@ Please note, this README relates to Grunt template that placed in master folder,
 		│   ├── pages                          * main pages templates
 		│   │   └── index.jade
 		│   ├── general                        * common src
+		│   ├── helpers                        * helper mixins
 		│   └── layouts                        * page layouts
 		│       └── default.jade
+		├── coffee                             * Coffeescripts
 		├── js                                 * scripts
 		│   ├── assembled.js
 		│   ├── ie                             * ie compat scripts
 		│   │   └── ie.js
+		│   ├── head                           * head scripts
+		│   │   └── head.js
 		│   └── vendor                         * vendor scripts
 		│       └── vendor.js
-		├── scss                               * less preprocessor styles
-		│   ├── screen.scss
+		├── sass                               * sass preprocessor styles
+		│   ├── ie.sass
+		│   ├── custom.sass
+		│   ├── noscript.sass
+		│   ├── screen.sass
 		│   ├── general                        * general styles
 		│   └── helpers                        * mixins and vars
 		│       └── _mixins, variables, gs
+		├── stylus                             * sass preprocessor styles
+		│   ├── ie.styl
+		│   ├── custom.styl
+		│   ├── noscript.styl
+		│   ├── screen.styl
+		│   ├── general                        * general styles
+		│   └── helpers                        * mixins and vars
+		│       └── _mixins, variables, gs
+		├── helpers                            * additional resources
+		|	├── favicon.ico
+		|	├── .htaccess
+		|	└── robots.txt
 		├── fonts                              * font sources
-		└── devtools                           * some developer tools
+		├── devtools                           * some developer tools
+		└── mockup                             * psd layout, assets src
+		    ├── psd
+		    ├── img
+		    └── fonts
 
 ```
 
@@ -88,7 +111,7 @@ If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out th
 * Before start you need to have _npm_ installed now, as well as a _grunt_.
 * Then you need to download this files. You can chose `Download zip` option or clone this repo to your local maschine.
 * Now go to this project folder in terminal. Once you're familiar with grunt installation process, you may install all this things with this command: `npm install`.This will create `node_moduldes` folder, that's normal.
-* Run `grunt`, and it will compile your files and watch for all changes. See [Tasks](#Tasks) chapter for more details.
+* Run `grunt`, and it will compile your files and watch for all changes. See [Tasks](#tasks) chapter for more details.
 
 This template is ready for work with [Bower](https://github.com/bower/bower). So at the root was created `bower.json` file with project dependencies. To install dependencies you need globally instaled Bower. 
 Bower depends on [Node.js](http://nodejs.org/) and [npm](http://npmjs.org/). Also make sure that [git](http://git-scm.com/) is installed as some bower
