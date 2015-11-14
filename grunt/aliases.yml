@@ -11,12 +11,11 @@ default:
         - 'watch'
 
 
-bower-dev:
+start:
     description: 'Move bower dependencies to main dev folders'
     tasks:
         - 'bower'
         - 'clean:gitkeep'
-        # - 'clean:bower'
 
 
 regen:
@@ -41,14 +40,13 @@ build:
         - 'csscomb'
         - 'uglify'
         - 'csso'
-        - 'clean:debug'
         # - 'cacheBust'
 
 
-build-deploy:
+deploy:
     description: 'Commit theme folder and push changes to remote'
     tasks:
-        - 'shell:buildDeploy'
+        - 'shell:deploy'
 
 zip:
     description: 'Creates archive with static theme'

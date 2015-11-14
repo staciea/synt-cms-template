@@ -7,7 +7,7 @@
 require "rubygems"
 
 desc "Deploy build version"
-task :buildDeploy do
+task :deploy do
   puts "## Commiting build website files"
   cd "theme" do
     system "git add --all"
