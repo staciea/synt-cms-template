@@ -4,7 +4,7 @@ module.exports = {
 		encoding: 'utf8',
 		algorithm: 'md5',
 		length: 16,
-		// ignorePatterns: ['ico'],
+		// ignorePatterns: ['icons'],
 		deleteOriginals: true,
 		rename: true,
 		filters: [{
