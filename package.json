@@ -1,6 +1,6 @@
 {
-  "name": "front-end-scaffold",
-  "description": "front-end-scaffold",
+  "name": "synt-cms-template",
+  "description": "Synteagle cms front-end template",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^1.0.1",

@@ -1,6 +1,6 @@
 {
   "name": "synt-cms-template",
-  "description": "synt-cms-template",
+  "description": "Synteagle cms front-end template",
   "license": "MIT",
   "dependencies": {
     "jquery": "latest",

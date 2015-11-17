@@ -1,4 +1,4 @@
-# Synteagle cms project template
+# Synteagle cms project template - Grunt
 
 Template with cms adjusted structure, based on [front-end-scaffold](https://github.com/orlovmax/front-end-scaffold), with common used technologies and tools.
 
@@ -32,12 +32,13 @@ Please note, this README relates to Grunt template that placed in `master` folde
 ├── package.json
 ├── bower.json
 ├── README.md
+├── CHANGELOG.md
 ├── Rakefile
 ├──grunt                                       * grunt tasks
 |   ├── task.js
 │   └── aliases.yml 
-├── test_screenshots                           * Responsive test screenshots
-├── zip                                        * Zipped theme bundle
+├── test_screenshots                           * responsive test screenshots
+├── zip                                        * zipped theme bundle
 └── theme                                      * main theme folder
 	├── index.html
 	└── static
@@ -77,7 +78,7 @@ Please note, this README relates to Grunt template that placed in `master` folde
 		│   ├── general                        * general styles
 		│   └── helpers                        * mixins and vars
 		│       └── _mixins, variables, gs
-		├── stylus                             * sass preprocessor styles
+		├── stylus                             * stylus preprocessor styles
 		│   ├── ie.styl
 		│   ├── custom.styl
 		│   ├── noscript.styl
@@ -93,7 +94,7 @@ Please note, this README relates to Grunt template that placed in `master` folde
 		├── devtools                           * some developer tools
 		└── mockup                             * psd layout, assets src
 		    ├── psd
-		    ├── img
+		    ├── images
 		    └── fonts
 
 ```
@@ -126,10 +127,10 @@ $ bower install
 $ bower install <package> --save
 ```
 
-### Editorconfig
+#### Editorconfig
 This project have .editorconfig file at the root that used by your code editor with editorconfig plugin. It describes codestyle like indent style, trailing whitespaces etc. See more details [here](http://editorconfig.org/) 
 
-### Package.json dependencies 
+#### Package.json dependencies 
 * ["grunt"](https://github.com/gruntjs)
 * ["grunt-autoprefixer"](https://github.com/nDmitry/grunt-autoprefixer)
 * ["grunt-browser-sync"](https://github.com/BrowserSync/grunt-browser-sync)
@@ -154,7 +155,7 @@ This project have .editorconfig file at the root that used by your code editor w
 * ["grunt-sync"](https://github.com/tomusdrw/grunt-sync)
 * ["main-bower-files"](https://github.com/ck86/main-bower-files)
 
-### bower.json dependencies 
+#### bower.json dependencies 
 * "jquery"
 * "modernizr"
 * "respond"
@@ -163,7 +164,8 @@ This project have .editorconfig file at the root that used by your code editor w
 ## Tasks
 Here comes groups of grunt tasks with some explanations
 
-### Default `grunt`
+#### Default 
+`grunt`
 ```
 - 'newer:coffee'                        Compile newer coffescript
 - 'newer:concat'                        Concatenate newer javascript
@@ -175,13 +177,15 @@ Here comes groups of grunt tasks with some explanations
 - 'watch'                               Watch for changes
 ```
 
-### Start `grunt start`
+#### Start 
+`grunt start`
 ```
 - 'bower'                               Copy bower components to dev folders
 - 'clean:gitkeep'                       Remove gitkeep files
 ```
 
-### Regenerate `grunt regen`
+#### Regenerate 
+`grunt regen`
 ```
 - 'coffee'                               Compile coffescript
 - 'concat'                               Concatenate javascript
@@ -193,7 +197,8 @@ Here comes groups of grunt tasks with some explanations
 - 'clean:build'                          Remove minified files with timestamps
 ```
 
-### Build `grunt build`
+#### Build 
+`grunt build`
 ```
 - 'processhtml'                          Replace assets paths in html
 - 'cmq'                                  Combine media queries in css files
@@ -204,22 +209,26 @@ Here comes groups of grunt tasks with some explanations
 - 'cacheBust'                            Cache static and add timestamps
 ```
 
-### Deploy `grunt deploy`
+#### Deploy 
+`grunt deploy`
 ```
 - 'shell:deploy'                         Deploy build version to github
 ```
 
-### Zip `grunt zip`
+#### Zip 
+`grunt zip`
 ```
 - 'compress'                             Compress build version
 ```
 
-### Server `grunt server`
+#### Server 
+`grunt server`
 ```
 - 'browserSync'                          Run server on `http://localhost:3000`
 ```
 
-### Sprite `grunt sprite`
+#### Sprite 
+`grunt sprite`
 ```
 - 'sprite'                               Create images sprite and related css
 ```
