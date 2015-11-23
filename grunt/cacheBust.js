@@ -5,7 +5,6 @@ module.exports = {
 		algorithm: 'md5',
 		length: 16,
 		// ignorePatterns: ['icons'],
-		deleteOriginals: true,
 		rename: true,
 		filters: [{
 			// 'img':
@@ -14,12 +13,22 @@ module.exports = {
 			// }
 		}]
 	},
-	assets: {
+	markup: {
 		files: [{
 			expand: true,
-        	cwd: '<%= theme.html %>',
-        	baseDir: '<%= theme.html %>',
+			cwd: '<%= theme.html %>',
+			baseDir: '<%= theme.html %>',
 			src: ['*.html']
 		}]
+
+	},
+	styles: {
+		files: [{
+			expand: true,
+			cwd: '<%= theme.css %>',
+			baseDir: '<%= theme.css %>',
+			src: ['*.css']
+		}]
+
 	}
 }

@@ -25,6 +25,7 @@ Please note, this README relates to Grunt template that placed in `master` folde
 * [License](#license)
 
 ## Folder and file structure
+
 ```
 .
 ├── .editorconfig
@@ -34,68 +35,67 @@ Please note, this README relates to Grunt template that placed in `master` folde
 ├── README.md
 ├── CHANGELOG.md
 ├── Rakefile
-├──grunt                                       * grunt tasks
+├──grunt/                                      * grunt tasks
 |   ├── task.js
 │   └── aliases.yml 
-├── test_screenshots                           * responsive test screenshots
-├── zip                                        * zipped theme bundle
-└── theme                                      * main theme folder
+|
+├── test_screenshots/                          * responsive test screenshots
+|
+├── zip/                                       * zipped theme bundle
+|
+└── theme/                                     * main theme folder
 	├── index.html
-	└── static
-		├── blocks                             * Website blocks library
-		│   └── block
+	└── static/
+		├── blocks/                            * website blocks library
+		│   └── block/
 		│       ├── block.sass
 		│       ├── block.styl
 		│       └── block.jade
-		├── css                                * compiled css
-		│   ├── custom.css
-		│   ├── ie.css
-		│   ├── noscript.css
-		│   └── screen.css
-		├── images                             * image sources
-		│   └── *.png, *.jpg, *.gif
-		├── jade                               * templates
-		│   ├── pages                          * main pages templates
-		│   │   └── index.jade
-		│   ├── general                        * common src
-		│   ├── helpers                        * helper mixins
-		│   └── layouts                        * page layouts
-		│       └── default.jade
-		├── coffee                             * Coffeescripts
-		├── js                                 * scripts
-		│   ├── assembled.js
-		│   ├── ie                             * ie compat scripts
-		│   │   └── ie.js
-		│   ├── head                           * head scripts
-		│   │   └── head.js
-		│   └── vendor                         * vendor scripts
-		│       └── vendor.js
-		├── sass                               * sass preprocessor styles
-		│   ├── ie.sass
-		│   ├── custom.sass
-		│   ├── noscript.sass
-		│   ├── screen.sass
-		│   ├── general                        * general styles
-		│   └── helpers                        * mixins and vars
-		│       └── _mixins, variables, gs
-		├── stylus                             * stylus preprocessor styles
+		|
+		├── css/                               * compiled css
+		├── images/                            * image sources
+		|
+		├── jade/                              * templates
+		│   ├── general/                       * common src
+		│   ├── helpers/                       * helper mixins
+		│   ├── layouts/                       * page layouts
+		│   └── pages/                         * main pages templates
+		|
+		├── coffee/                            * coffeescripts
+		|
+		├── js/                                * scripts
+		│   ├── ie/                            * ie compat scripts
+		│   ├── head/                          * head scripts
+		│   └── vendor/                        * vendor scripts
+		|
+		├── sass/                              * sass preprocessor styles|	│   ├── general/                       * general styles
+		|   ├── helpers/                       * mixins and vars
+		|   ├── ie.sass
+		|   ├── custom.sass
+		|   ├── noscript.sass
+		|   └── screen.sass
+		|
+		├── stylus/                            * stylus preprocessor styles
+		│   ├── general/                       * general styles
+		│   ├── helpers/                       * mixins and vars
 		│   ├── ie.styl
 		│   ├── custom.styl
 		│   ├── noscript.styl
-		│   ├── screen.styl
-		│   ├── general                        * general styles
-		│   └── helpers                        * mixins and vars
-		│       └── _mixins, variables, gs
-		├── helpers                            * additional resources
+		│   └── screen.styl
+		|
+		├── helpers/                           * additional resources
 		|	├── favicon.ico
 		|	├── .htaccess
 		|	└── robots.txt
-		├── fonts                              * font sources
-		├── devtools                           * some developer tools
-		└── mockup                             * psd layout, assets src
-		    ├── psd
-		    ├── images
-		    └── fonts
+		|
+		├── fonts/                             * font sources
+		|
+		├── devtools/                          * some developer tools
+		|
+		└── mockup/                            * psd layout, assets src
+		    ├── psd/
+		    ├── images/
+		    └── fonts/
 
 ```
 

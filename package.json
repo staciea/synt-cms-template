@@ -23,7 +23,7 @@
     "grunt-processhtml": "^0.3.3",
     "grunt-shell": "^1.1.1",
     "grunt-spritesmith": "^5.1.1",
-    "grunt-sync": "^0.2.3",
+    "grunt-sync": "^0.4.1",
     "main-bower-files": "^2.9.0"
   },
   "license": "MIT",
