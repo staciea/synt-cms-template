@@ -127,6 +127,8 @@ $ bower install
 $ bower install <package> --save
 ```
 
+Also bower install included into internal start task using shell plugin. Same thing but uses task runner.
+
 #### Editorconfig
 This project have .editorconfig file at the root that used by your code editor with editorconfig plugin. It describes codestyle like indent style, trailing whitespaces etc. See more details [here](http://editorconfig.org/) 
 
@@ -180,6 +182,7 @@ Here comes groups of grunt tasks with some explanations
 #### Start 
 `grunt start`
 ```
+- 'shell:bower'                         Install bower components
 - 'bower'                               Copy bower components to dev folders
 - 'clean:gitkeep'                       Remove gitkeep files
 ```
