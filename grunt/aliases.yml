@@ -1,14 +1,19 @@
 default:
-    description: 'Default dev task'
+    description: 'Default dev task with static server'
+    tasks:
+        - 'browserSync:dev'
+        - 'watch'
+
+
+dev:
+    description: 'Internal task: process changed files during the watch task'
     tasks:
         - 'newer:coffee'
         - 'newer:concat'
         - 'newer:sass'
         - 'newer:stylus'
         - 'newer:jade'
-        # - 'newer:imagemin'
         - 'sync'
-        - 'watch'
 
 
 start:
@@ -27,7 +32,6 @@ regen:
         - 'sass'
         - 'stylus'
         - 'jade'
-        # - 'imagemin'
         - 'sync'
         - 'clean:build'
 
@@ -35,6 +39,7 @@ regen:
 build:
     description: 'Default build task'
     tasks:
+        - 'imagemin'
         - 'processhtml'
         - 'cmq'
         - 'autoprefixer'
@@ -42,7 +47,8 @@ build:
         - 'uglify'
         - 'csso'
         - 'clean:dev'
-        # - 'cacheBust'
+        - 'cacheBust'
+        - 'browserSync:build'
 
 
 deploy:
@@ -54,11 +60,6 @@ zip:
     description: 'Creates archive with static theme'
     tasks:
         - 'compress:theme'
-
-server:
-    description: 'Run server for static theme'
-    tasks:
-        - 'browserSync'
 
 sprite:
     description: 'Sprite creation task. Should be configured before running'

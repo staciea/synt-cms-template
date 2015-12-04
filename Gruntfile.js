@@ -11,10 +11,8 @@ module.exports = function(grunt) {
 				stylus: '<%= theme.main %>/static/stylus',
 				css: '<%= theme.main %>/static/css',
 				images: '<%= theme.main %>/static/images',
-				fonts: '<%= theme.main %>/static/fonts',
 				helpers: '<%= theme.main %>/static/helpers',
 				devtools: '<%= theme.main %>/static/devtools',
-				mockup: '<%= theme.main %>/static/mockup',
 				html: '<%= theme.main %>'
 			},
 			// Zip result

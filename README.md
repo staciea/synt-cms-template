@@ -13,12 +13,12 @@ Please note, this README relates to Grunt template that placed in `master` folde
 	- [bower.json dependencies](#bowerjson-dependencies)
 * [Tasks](#tasks)
 	- [Default](#default)
+	- [Dev](#dev)
 	- [Start](#start)
 	- [Regenerate](#regenerate)
 	- [Build](#build)
 	- [Deploy](#deploy)
 	- [Zip](#zip)
-	- [Server](#server)
 	- [Sprite](#sprite)
 * [Live reload](#live-reload)
 * [Changelog](#changelog)
@@ -90,12 +90,7 @@ Please note, this README relates to Grunt template that placed in `master` folde
 		|
 		├── fonts/                             * font sources
 		|
-		├── devtools/                          * some developer tools
-		|
-		└── mockup/                            * psd layout, assets src
-		    ├── psd/
-		    ├── images/
-		    └── fonts/
+		└── devtools/                          * some developer tools
 
 ```
 
@@ -169,14 +164,19 @@ Here comes groups of grunt tasks with some explanations
 #### Default 
 `grunt`
 ```
+- 'browserSync:dev'                     Run server on `http://localhost:3000`
+- 'watch'                               Watch for changes and run dev task
+```
+
+#### Dev 
+Internal task that runs during `default` task to process changed files
+```
 - 'newer:coffee'                        Compile newer coffescript
 - 'newer:concat'                        Concatenate newer javascript
 - 'newer:sass'                          Compile newer Sass stylesheets
 - 'newer:stylus'                        Compile newer Stylus stylesheets
 - 'newer:jade'                          Compile newer Jade templates
-- 'newer:imagemin'                      Minify newer images
 - 'sync'                                Sync helpers and other assets
-- 'watch'                               Watch for changes
 ```
 
 #### Start 
@@ -195,7 +195,6 @@ Here comes groups of grunt tasks with some explanations
 - 'sass'                                 Compile Sass stylesheets
 - 'stylus'                               Compile Stylus stylesheets
 - 'jade'                                 Compile Jade templates
-- 'imagemin'                             Minify images
 - 'sync'                                 Sync helpers and other assets
 - 'clean:build'                          Remove minified files with timestamps
 ```
@@ -203,13 +202,16 @@ Here comes groups of grunt tasks with some explanations
 #### Build 
 `grunt build`
 ```
+- 'imagemin'                             Minify images
 - 'processhtml'                          Replace assets paths in html
 - 'cmq'                                  Combine media queries in css files
 - 'autoprefixer'                         Add vendor prefixes in css
 - 'csscomb'                              Applie styleguide to stylesheets
 - 'uglify'                               Minify javascripts
 - 'csso'                                 Minify stylesheets
+- 'clean:dev'                            Remove dev things, live.js
 - 'cacheBust'                            Cache static and add timestamps
+- 'browserSync:build'                    Run server on `http://localhost:3000`
 ```
 
 #### Deploy 
@@ -222,12 +224,6 @@ Here comes groups of grunt tasks with some explanations
 `grunt zip`
 ```
 - 'compress'                             Compress build version
-```
-
-#### Server 
-`grunt server`
-```
-- 'browserSync'                          Run server on `http://localhost:3000`
 ```
 
 #### Sprite 
