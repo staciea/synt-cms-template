@@ -7,7 +7,6 @@ module.exports = {
 				'<%= theme.css %>/*.css',
 				'<%= theme.coffee %>/*.coffee',
 				'<%= theme.js %>/*.js',
-				'<%= theme.img %>/**/*.{png,jpg,gif}',
 				'<%= theme.jade %>/pages/*.jade',
 				'<%= theme.fonts %>/**/*.{eot,svg,ttf,otf,woff,woff2}'],
 		tasks: ['default'],
