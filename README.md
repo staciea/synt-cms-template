@@ -235,8 +235,5 @@ Internal task that runs during `default` task to process changed files
 ## Live reload 
 For this project I use live.js which minified version and  and link to this script in final html will be removed after running build task.
 
-## Changelog
-Youc can find full changelog [HERE](https://github.com/synteagle/synteagle-cms-template/blob/master/CHANGELOG.md)
-
 ## License
 [MIT](http://opensource.org/licenses/MIT)

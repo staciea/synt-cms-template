@@ -9,7 +9,7 @@ module.exports = {
 				'<%= theme.js %>/*.js',
 				'<%= theme.jade %>/pages/*.jade',
 				'<%= theme.fonts %>/**/*.{eot,svg,ttf,otf,woff,woff2}'],
-		tasks: ['default'],
+		tasks: ['dev'],
 		options: {
 			spawn: false,
 		},
