@@ -45,6 +45,7 @@ Please note, this README relates to Grunt template that placed in `master` folde
 |
 └── theme/                                     * main theme folder
 	├── index.html
+	├── page.html
 	└── static/
 		├── blocks/                            * website blocks library
 		│   └── block/
