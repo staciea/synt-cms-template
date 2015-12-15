@@ -8,6 +8,14 @@ module.exports = {
 			dest: '<%= theme.js %>/'
 		}]
 	},
+	intro: {
+		files: [{
+			expand: true,
+			cwd: '<%= theme.devtools %>/',
+			src: 'index.html',
+			dest: '<%= theme.main %>/'
+		}]
+	},
 	helpers: {
 		files: [{
 			expand: true,

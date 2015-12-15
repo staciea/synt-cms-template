@@ -2,7 +2,11 @@
 module.exports = {
 	dev:{
 		bsFiles: {
-			src: '<%= server.files %>/**/*'
+			src: [
+				'<%= server.js %>/*.js',
+				'<%= server.css %>/*.css',
+				'<%= server.html %>/*.html'
+			]
 		},
 		options: {
 			watchTask: true,
@@ -13,7 +17,7 @@ module.exports = {
 	},
 	build:{
 		bsFiles: {
-			src: '<%= server.files %>/**/*'
+			src: '<%= server.files %>/**/*.*'
 		},
 		options: {
 			server: {

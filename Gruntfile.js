@@ -23,7 +23,9 @@ module.exports = function(grunt) {
 			// Server path
 			server: {
 				main: 'theme',
-				files: '<%= server.main %>'
+				js: '<%= server.main %>/static/js',
+				css: '<%= server.main %>/static/css',
+				html: '<%= server.main %>'
 			}
 		},
 		loadGruntTasks: {

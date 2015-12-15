@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Project Name</title>
+		<title>Synt CMS Template</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="favicon.ico">
 		<!--[if lt IE 9]><script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script><script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -39,7 +39,7 @@
 				width: 100%;
 				max-width: 1200px;
 				min-height: 100%;
-				padding: 8%;
+				padding: 8% 0;
 				margin: 0 auto;
 				text-align: center;
 			}
@@ -47,15 +47,16 @@
 			.project-name {
 				display: block;
 				width: 100%;
-				margin-bottom: 8%;
+				margin-bottom: 4%;
 				text-align: center;
 			}
 			.project-name__title {
 				display: inline-block;
 				width: 100%;
 				margin: 0 auto;
+				padding: 0 2%;
 				font-family: Tahoma, Verdana, Arial, sans-serif;
-				font-size: 150px;
+				font-size: 200px;
 				line-height: 1;
 				color: #fff;
 			}
@@ -76,29 +77,26 @@
 				font-size: 25px;
 				line-height: 2;
 				color: #fff;
+				outline: none;
+				-webkit-transition: all .5s;
+				   -moz-transition: all .5s;
+				    -ms-transition: all .5s;
+				     -o-transition: all .5s;
+				        transition: all .5s;
 			}
 			.project-pages__link:hover{
-				text-decoration: none;
+				color: #ddd;
 			}
 		</style>
 
 		<main class="project">
 			<h1 class="project-name">
-				<span id="fit" class="project-name__title">Project Name</span>
+				<span id="fit" class="project-name__title">Synt CMS Template</span>
 			</h1>
 
 			<ul class="project-pages">
 				<li class="project-pages__item">
-					<a href="#" class="project-pages__link">Home Page</a>
-				</li>
-				<li class="project-pages__item">
-					<a href="#" class="project-pages__link">Blog Page</a>
-				</li>
-				<li class="project-pages__item">
-					<a href="#" class="project-pages__link">Contact Page</a>
-				</li>
-				<li class="project-pages__item">
-					<a href="#" class="project-pages__link">Single Page</a>
+					<a href="home.html" class="project-pages__link">Home Page</a>
 				</li>
 			</ul>
 		</main>
@@ -156,7 +154,7 @@
 					return el;
 				};
 			})();
-			window.fitText( document.getElementById("fit"), 0.8 );
+			window.fitText( document.getElementById("fit"), 1 );
 		</script>
 	</body>
 </html>
