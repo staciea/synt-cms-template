@@ -4,7 +4,8 @@ module.exports = {
 		encoding: 'utf8',
 		algorithm: 'md5',
 		length: 16,
-		// ignorePatterns: ['icons'],
+		ignorePatterns: ['favicon.ico'],
+		// deleteOriginals: true,
 		rename: true,
 		filters: [{
 			// 'img':
@@ -20,7 +21,6 @@ module.exports = {
 			baseDir: '<%= theme.html %>',
 			src: ['*.html']
 		}]
-
 	},
 	styles: {
 		files: [{

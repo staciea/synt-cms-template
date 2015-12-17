@@ -2,7 +2,7 @@
 module.exports = {
 	// Copy bower files into js vendor folder
 	vendor: {
-		dest: '<%= theme.js %>/vendor/',
+		dest: '<%= theme.js %>/vendor',
 		options: {
 			checkExistence: true,
 			overrides: {
@@ -22,7 +22,7 @@ module.exports = {
 		}
 	},
 	ie: {
-		dest: '<%= theme.js %>/ie/',
+		dest: '<%= theme.js %>/ie',
 		options: {
 			checkExistence: true,
 			overrides: {

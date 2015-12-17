@@ -21,7 +21,6 @@ Please note, this README relates to Grunt template that placed in `master` folde
 	- [Zip](#zip)
 	- [Sprite](#sprite)
 * [Live reload](#live-reload)
-* [Changelog](#changelog)
 * [License](#license)
 
 ## Folder and file structure
@@ -33,7 +32,6 @@ Please note, this README relates to Grunt template that placed in `master` folde
 ├── package.json
 ├── bower.json
 ├── README.md
-├── CHANGELOG.md
 ├── Rakefile
 ├──grunt/                                      * grunt tasks
 |   ├── task.js
@@ -189,7 +187,7 @@ Internal task that runs during `default` task to process changed files
 ```
 
 #### Regenerate 
-`grunt regen`
+`grunt regenerate`
 ```
 - 'coffee'                               Compile coffescript
 - 'concat'                               Concatenate javascript

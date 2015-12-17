@@ -8,7 +8,7 @@ module.exports = {
 		files: [ {
 			cwd: '<%= theme.jade %>',
 			src: ['**/*.jade'],
-			dest: '<%= theme.html %>/',
+			dest: '<%= theme.html %>',
 			expand: true,
 			ext: '.html'
 		} ]

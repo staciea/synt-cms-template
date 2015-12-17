@@ -24,7 +24,7 @@ start:
         - 'clean:gitkeep'
 
 
-regen:
+regenerate:
     description: 'Regenerate project by running all tasks without newer directive'
     tasks:
         - 'coffee'

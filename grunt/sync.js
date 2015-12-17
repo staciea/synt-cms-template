@@ -3,17 +3,17 @@ module.exports = {
 	livejs: {
 		files: [{
 			expand: true,
-			cwd: '<%= theme.devtools %>/',
+			cwd: '<%= theme.devtools %>',
 			src: 'live.js',
-			dest: '<%= theme.js %>/'
+			dest: '<%= theme.js %>'
 		}]
 	},
 	intro: {
 		files: [{
 			expand: true,
-			cwd: '<%= theme.devtools %>/',
+			cwd: '<%= theme.devtools %>',
 			src: 'index.html',
-			dest: '<%= theme.main %>/'
+			dest: '<%= theme.main %>'
 		}]
 	},
 	helpers: {
