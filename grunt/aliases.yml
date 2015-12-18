@@ -56,11 +56,6 @@ deploy:
     tasks:
         - 'shell:deploy'
 
-zip:
-    description: 'Creates archive with static theme'
-    tasks:
-        - 'compress:theme'
-
 sprite:
     description: 'Sprite creation task. Should be configured before running'
     tasks:

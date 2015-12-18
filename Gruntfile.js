@@ -15,11 +15,6 @@ module.exports = function(grunt) {
 				devtools: '<%= theme.main %>/static/devtools',
 				html: '<%= theme.main %>'
 			},
-			// Zip result
-			zip: {
-				main: 'zip',
-				theme: '<%= zip.main %>/theme.zip'
-			},
 			// Server path
 			server: {
 				main: 'theme',

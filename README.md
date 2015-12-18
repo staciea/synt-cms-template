@@ -18,7 +18,6 @@ Please note, this README relates to Grunt template that placed in `master` folde
 	- [Regenerate](#regenerate)
 	- [Build](#build)
 	- [Deploy](#deploy)
-	- [Zip](#zip)
 	- [Sprite](#sprite)
 * [Live reload](#live-reload)
 * [License](#license)
@@ -38,8 +37,6 @@ Please note, this README relates to Grunt template that placed in `master` folde
 │   └── aliases.yml 
 |
 ├── test_screenshots/                          * responsive test screenshots
-|
-├── zip/                                       * zipped theme bundle
 |
 └── theme/                                     * main theme folder
 	├── index.html
@@ -134,7 +131,6 @@ This project have .editorconfig file at the root that used by your code editor w
 * ["grunt-combine-media-queries"](https://github.com/buildingblocks/grunt-combine-media-queries)
 * ["grunt-contrib-clean"](https://github.com/gruntjs/grunt-contrib-clean)
 * ["grunt-contrib-concat"](https://github.com/gruntjs/grunt-contrib-concat)
-* ["grunt-contrib-compress"](https://github.com/gruntjs/grunt-contrib-compress)
 * ["grunt-contrib-coffee"](https://github.com/gruntjs/grunt-contrib-coffee)
 * ["grunt-contrib-imagemin"](https://github.com/gruntjs/grunt-contrib-imagemin)
 * ["grunt-contrib-jade"](https://github.com/gruntjs/grunt-contrib-jade)
@@ -150,6 +146,7 @@ This project have .editorconfig file at the root that used by your code editor w
 * ["grunt-spritesmith"](https://github.com/Ensighten/grunt-spritesmith)
 * ["grunt-sync"](https://github.com/tomusdrw/grunt-sync)
 * ["main-bower-files"](https://github.com/ck86/main-bower-files)
+* ["load-grunt-config"](https://github.com/firstandthird/load-grunt-config)
 
 #### bower.json dependencies 
 * "jquery"
@@ -217,12 +214,6 @@ Internal task that runs during `default` task to process changed files
 `grunt deploy`
 ```
 - 'shell:deploy'                         Deploy build version to github
-```
-
-#### Zip 
-`grunt zip`
-```
-- 'compress'                             Compress build version
 ```
 
 #### Sprite 
