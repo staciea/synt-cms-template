@@ -5,7 +5,7 @@ module.exports = {
 			src: [
 				'<%= server.js %>/*.js',
 				'<%= server.css %>/*.css',
-				'<%= server.html %>/*.html'
+				'<%= server.html %>/**/*.html'
 			]
 		},
 		options: {

@@ -23,10 +23,9 @@
     "grunt-shell": "^1.1.1",
     "grunt-spritesmith": "^5.1.1",
     "grunt-sync": "^0.4.1",
-    "main-bower-files": "^2.9.0"
+    "main-bower-files": "^2.9.0",
+    "load-grunt-config": "^0.17.1"
   },
   "license": "MIT",
-  "dependencies": {
-    "load-grunt-config": "^0.17.1"
-  }
+  "dependencies": {}
 }
