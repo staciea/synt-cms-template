@@ -21,6 +21,8 @@ module.exports = {
 			}
 		}
 	},
+
+	// Copy bower files into js ie folder
 	ie: {
 		dest: '<%= theme.js %>/ie',
 		options: {

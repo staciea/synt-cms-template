@@ -1,5 +1,15 @@
 // Grunt Task for keeping multiple browsers & devices in sync when building websites
 module.exports = {
+	main:{
+		bsFiles: {
+			src: '<%= server.files %>/**/*.*'
+		},
+		options: {
+			server: {
+				baseDir: '<%= server.main %>'
+			}
+		}
+	},
 	dev:{
 		bsFiles: {
 			src: [
@@ -10,16 +20,6 @@ module.exports = {
 		},
 		options: {
 			watchTask: true,
-			server: {
-				baseDir: '<%= server.main %>'
-			}
-		}
-	},
-	build:{
-		bsFiles: {
-			src: '<%= server.files %>/**/*.*'
-		},
-		options: {
 			server: {
 				baseDir: '<%= server.main %>'
 			}

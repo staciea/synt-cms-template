@@ -1,6 +1,12 @@
 default:
     description: 'Default dev task with static server'
     tasks:
+        - 'coffee'
+        - 'concat'
+        - 'sass'
+        - 'stylus'
+        - 'jade'
+        - 'sync'
         - 'browserSync:dev'
         - 'watch'
 
@@ -48,13 +54,18 @@ build:
         - 'csso'
         - 'clean:dev'
         - 'cacheBust'
-        - 'browserSync:build'
+        - 'browserSync:main'
 
 
 deploy:
     description: 'Commit theme folder and push changes to remote'
     tasks:
         - 'shell:deploy'
+
+server:
+    description: 'Run server for static theme'
+    tasks:
+        - 'browserSync:main'
 
 sprite:
     description: 'Sprite creation task. Should be configured before running'

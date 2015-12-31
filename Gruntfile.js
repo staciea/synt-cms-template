@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 	require('load-grunt-config')(grunt, {
 		data: {
-			// Dev paths
+			// Theme paths
 			theme: {
 				main: 'theme',
 				coffee: '<%= theme.main %>/static/coffee',

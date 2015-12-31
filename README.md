@@ -18,6 +18,7 @@ Please note, this README relates to Grunt template that placed in `master` folde
 	- [Regenerate](#regenerate)
 	- [Build](#build)
 	- [Deploy](#deploy)
+	- [Server](#server)
 	- [Sprite](#sprite)
 * [Live reload](#live-reload)
 * [License](#license)
@@ -49,6 +50,7 @@ Please note, this README relates to Grunt template that placed in `master` folde
 		│       └── block.jade
 		|
 		├── css/                               * compiled css
+		|
 		├── images/                            * image sources
 		|
 		├── jade/                              * templates
@@ -205,7 +207,6 @@ Internal task that runs during `default` task to process changed files
 - 'csscomb'                              Applie styleguide to stylesheets
 - 'uglify'                               Minify javascripts
 - 'csso'                                 Minify stylesheets
-- 'clean:dev'                            Remove dev things, live.js
 - 'cacheBust'                            Cache static and add timestamps
 - 'browserSync:build'                    Run server on `http://localhost:3000`
 ```
@@ -216,6 +217,12 @@ Internal task that runs during `default` task to process changed files
 - 'shell:deploy'                         Deploy build version to github
 ```
 
+#### Server 
+`grunt server`
+```
+- 'browserSync:main'                    Run server on `http://localhost:3000`
+```
+
 #### Sprite 
 `grunt sprite`
 ```
@@ -223,7 +230,7 @@ Internal task that runs during `default` task to process changed files
 ```
 
 ## Live reload 
-For this project I use live.js which minified version and  and link to this script in final html will be removed after running build task.
+For this project I use BrowserSync with page reload after assets changing. You can use live.js instead if you want to achieve live coding on LAMP/WAMP server.
 
 ## License
 [MIT](http://opensource.org/licenses/MIT)
