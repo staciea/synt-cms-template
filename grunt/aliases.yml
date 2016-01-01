@@ -2,11 +2,15 @@ default:
     description: 'Default dev task with static server'
     tasks:
         - 'coffee'
-        - 'concat'
+        - 'concat:main'
+        - 'concat:head'
+        - 'concat:ie'
+        - 'concat:vendor'
         - 'sass'
         - 'stylus'
         - 'jade'
-        - 'sync'
+        - 'sync:intro'
+        - 'sync:helpers'
         - 'browserSync:dev'
         - 'watch'
 
@@ -15,18 +19,23 @@ dev:
     description: 'Internal task: process changed files during the watch task'
     tasks:
         - 'newer:coffee'
-        - 'newer:concat'
+        - 'newer:concat:main'
+        - 'newer:concat:head'
+        - 'newer:concat:ie'
+        - 'newer:concat:vendor'
         - 'newer:sass'
         - 'newer:stylus'
         - 'newer:jade'
-        - 'sync'
+        - 'sync:intro'
+        - 'sync:helpers'
 
 
 start:
     description: 'Move bower dependencies to main dev folders'
     tasks:
         - 'shell:bower'
-        - 'bower'
+        - 'bower:ie'
+        - 'bower:vendor'
         - 'clean:gitkeep'
 
 
@@ -34,11 +43,15 @@ regenerate:
     description: 'Regenerate project by running all tasks without newer directive'
     tasks:
         - 'coffee'
-        - 'concat'
+        - 'concat:main'
+        - 'concat:head'
+        - 'concat:ie'
+        - 'concat:vendor'
         - 'sass'
         - 'stylus'
         - 'jade'
-        - 'sync'
+        - 'sync:intro'
+        - 'sync:helpers'
         - 'clean:build'
 
 
@@ -50,7 +63,10 @@ build:
         - 'cmq'
         - 'autoprefixer'
         - 'csscomb'
-        - 'uglify'
+        - 'uglify:main'
+        - 'uglify:head'
+        - 'uglify:ie'
+        - 'uglify:vendor'
         - 'csso'
         - 'clean:dev'
         - 'cacheBust'

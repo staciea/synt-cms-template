@@ -162,38 +162,57 @@ Here comes groups of grunt tasks with some explanations
 #### Default 
 `grunt`
 ```
-- 'browserSync:dev'                     Run server on `http://localhost:3000`
-- 'watch'                               Watch for changes and run dev task
+- 'coffee'                               Compile coffescript
+- 'concat:main'                          Concatenate main javascript
+- 'concat:head'                          Concatenate head javascript
+- 'concat:ie'                            Concatenate ie javascript
+- 'concat:vendor'                        Concatenate vendor javascript
+- 'sass'                                 Compile Sass stylesheets
+- 'stylus'                               Compile Stylus stylesheets
+- 'jade'                                 Compile Jade templates
+- 'sync:intro'                           Sync intro page with page list
+- 'sync:helpers'                         Sync helpers and other assets
+- 'browserSync:dev'                      Run server on `http://localhost:3000`
+- 'watch'                                Watch for changes and run dev task
 ```
 
 #### Dev 
 Internal task that runs during `default` task to process changed files
 ```
-- 'newer:coffee'                        Compile newer coffescript
-- 'newer:concat'                        Concatenate newer javascript
-- 'newer:sass'                          Compile newer Sass stylesheets
-- 'newer:stylus'                        Compile newer Stylus stylesheets
-- 'newer:jade'                          Compile newer Jade templates
-- 'sync'                                Sync helpers and other assets
+- 'newer:coffee'                         Compile newer coffescript
+- 'newer:concat:main'                    Concatenate main javascript
+- 'newer:concat:head'                    Concatenate head javascript
+- 'newer:concat:ie'                      Concatenate ie javascript
+- 'newer:concat:vendor'                  Concatenate vendor javascript
+- 'newer:sass'                           Compile newer Sass stylesheets
+- 'newer:stylus'                         Compile newer Stylus stylesheets
+- 'newer:jade'                           Compile newer Jade templates
+- 'sync:intro'                           Sync intro page with page list
+- 'sync:helpers'                         Sync helpers and other assets
 ```
 
 #### Start 
 `grunt start`
 ```
-- 'shell:bower'                         Install bower components
-- 'bower'                               Copy bower components to dev folders
-- 'clean:gitkeep'                       Remove gitkeep files
+- 'shell:bower'                          Install bower components
+- 'bower:ie'                             Copy ie components to js folder
+- 'bower:vendor'                         Copy vendor  components to js folder
+- 'clean:gitkeep'                        Remove gitkeep files
 ```
 
 #### Regenerate 
 `grunt regenerate`
 ```
 - 'coffee'                               Compile coffescript
-- 'concat'                               Concatenate javascript
+- 'concat:main'                          Concatenate main javascript
+- 'concat:head'                          Concatenate head javascript
+- 'concat:ie'                            Concatenate ie javascript
+- 'concat:vendor'                        Concatenate vendor javascript
 - 'sass'                                 Compile Sass stylesheets
 - 'stylus'                               Compile Stylus stylesheets
 - 'jade'                                 Compile Jade templates
-- 'sync'                                 Sync helpers and other assets
+- 'sync:intro'                           Sync intro page with page list
+- 'sync:helpers'                         Sync helpers and other assets
 - 'clean:build'                          Remove minified files with timestamps
 ```
 
@@ -205,7 +224,10 @@ Internal task that runs during `default` task to process changed files
 - 'cmq'                                  Combine media queries in css files
 - 'autoprefixer'                         Add vendor prefixes in css
 - 'csscomb'                              Applie styleguide to stylesheets
-- 'uglify'                               Minify javascripts
+- 'uglify:main'                          Minify main javascript
+- 'uglify:head'                          Minify head javascript
+- 'uglify:ie'                            Minify ie javascript
+- 'uglify:vendor'                        Minify vendor javascript
 - 'csso'                                 Minify stylesheets
 - 'cacheBust'                            Cache static and add timestamps
 - 'browserSync:build'                    Run server on `http://localhost:3000`
