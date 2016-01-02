@@ -2,7 +2,7 @@
 module.exports = {
 	options: {
 		//By default >1%, last 2 versions, Firefox ESR, Opera 12.1;
-		browsers: browserlist,
+		browsers: '<%= browserlist %>',
 		cascade: true
 	},
 	main: {

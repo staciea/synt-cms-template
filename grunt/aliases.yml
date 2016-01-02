@@ -1,7 +1,18 @@
-default:
-    description: 'Default dev task with static server'
+start:
+    description: 'Move bower dependencies to main dev folders'
     tasks:
-        - 'coffee'
+        - 'shell:bower'
+        - 'bower:ie'
+        - 'bower:vendor'
+        - 'clean:gitkeep'
+
+
+dev:
+    description: 'Dev task with static server'
+    tasks:
+        - 'coffee:main'
+        - 'coffee:head'
+        - 'coffee:vendor'
         - 'concat:main'
         - 'concat:head'
         - 'concat:ie'
@@ -15,34 +26,25 @@ default:
         - 'watch'
 
 
-dev:
-    description: 'Internal task: process changed files during the watch task'
+build:
+    description: 'Build task'
     tasks:
-        - 'newer:coffee'
-        - 'newer:concat:main'
-        - 'newer:concat:head'
-        - 'newer:concat:ie'
-        - 'newer:concat:vendor'
-        - 'newer:sass'
-        - 'newer:stylus'
-        - 'newer:jade'
-        - 'sync:intro'
-        - 'sync:helpers'
+        - 'imagemin'
+        - 'processhtml'
+        - 'cmq'
+        - 'autoprefixer'
+        - 'csscomb'
+        - 'uglify'
+        - 'csso'
+        - 'browserSync:main'
 
 
-start:
-    description: 'Move bower dependencies to main dev folders'
+rebuild:
+    description: 'Regenerate and build project by running all tasks'
     tasks:
-        - 'shell:bower'
-        - 'bower:ie'
-        - 'bower:vendor'
-        - 'clean:gitkeep'
-
-
-regenerate:
-    description: 'Regenerate project by running all tasks without newer directive'
-    tasks:
-        - 'coffee'
+        - 'coffee:main'
+        - 'coffee:head'
+        - 'coffee:vendor'
         - 'concat:main'
         - 'concat:head'
         - 'concat:ie'
@@ -52,25 +54,13 @@ regenerate:
         - 'jade'
         - 'sync:intro'
         - 'sync:helpers'
-        - 'clean:build'
-
-
-build:
-    description: 'Default build task'
-    tasks:
         - 'imagemin'
         - 'processhtml'
         - 'cmq'
         - 'autoprefixer'
         - 'csscomb'
-        - 'uglify:main'
-        - 'uglify:head'
-        - 'uglify:ie'
-        - 'uglify:vendor'
+        - 'uglify'
         - 'csso'
-        - 'clean:dev'
-        - 'cacheBust'
-        - 'browserSync:main'
 
 
 deploy:

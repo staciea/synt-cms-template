@@ -12,11 +12,10 @@ Please note, this README relates to Grunt template that placed in `master` folde
 	- [Package.json dependencies](#packagejson-dependencies)
 	- [bower.json dependencies](#bowerjson-dependencies)
 * [Tasks](#tasks)
-	- [Default](#default)
-	- [Dev](#dev)
 	- [Start](#start)
-	- [Regenerate](#regenerate)
+	- [Dev](#dev)
 	- [Build](#build)
+	- [Rebuild](#rebuild)
 	- [Deploy](#deploy)
 	- [Server](#server)
 	- [Sprite](#sprite)
@@ -60,6 +59,9 @@ Please note, this README relates to Grunt template that placed in `master` folde
 		│   └── pages/                         * main pages templates
 		|
 		├── coffee/                            * coffeescripts
+		│   ├── main/                          * main scripts
+		│   ├── head/                          * head scripts
+		│   └── vendor/                        * vendor scripts
 		|
 		├── js/                                * scripts
 		│   ├── ie/                            * ie compat scripts
@@ -105,7 +107,6 @@ If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out th
 * Before start you need to have _npm_ installed now, as well as a _grunt_.
 * Then you need to download this files. You can chose `Download zip` option or clone this repo to your local maschine.
 * Now go to this project folder in terminal. Once you're familiar with grunt installation process, you may install all this things with this command: `npm install`.This will create `node_moduldes` folder, that's normal.
-* Run `grunt`, and it will compile your files and watch for all changes. See [Tasks](#tasks) chapter for more details.
 
 This template is ready for work with [Bower](https://github.com/bower/bower). So at the root was created `bower.json` file with project dependencies. To install dependencies you need globally instaled Bower. 
 Bower depends on [Node.js](http://nodejs.org/) and [npm](http://npmjs.org/). Also make sure that [git](http://git-scm.com/) is installed as some bower
@@ -159,10 +160,21 @@ This project have .editorconfig file at the root that used by your code editor w
 ## Tasks
 Here comes groups of grunt tasks with some explanations
 
-#### Default 
-`grunt`
+#### Start 
+`grunt start`
 ```
-- 'coffee'                               Compile coffescript
+- 'shell:bower'                          Install bower components
+- 'bower:ie'                             Copy ie components to js folder
+- 'bower:vendor'                         Copy vendor  components to js folder
+- 'clean:gitkeep'                        Remove gitkeep files
+```
+
+#### Dev
+`gulp dev` - Dev task with static server
+```
+- 'coffee:main'                          Compile main coffescript
+- 'coffee:head'                          Compile head coffescript
+- 'coffee:vendor'                        Compile vendor coffescript
 - 'concat:main'                          Concatenate main javascript
 - 'concat:head'                          Concatenate head javascript
 - 'concat:ie'                            Concatenate ie javascript
@@ -176,34 +188,25 @@ Here comes groups of grunt tasks with some explanations
 - 'watch'                                Watch for changes and run dev task
 ```
 
-#### Dev 
-Internal task that runs during `default` task to process changed files
+#### Build 
+`grunt build` - Build task
 ```
-- 'newer:coffee'                         Compile newer coffescript
-- 'newer:concat:main'                    Concatenate main javascript
-- 'newer:concat:head'                    Concatenate head javascript
-- 'newer:concat:ie'                      Concatenate ie javascript
-- 'newer:concat:vendor'                  Concatenate vendor javascript
-- 'newer:sass'                           Compile newer Sass stylesheets
-- 'newer:stylus'                         Compile newer Stylus stylesheets
-- 'newer:jade'                           Compile newer Jade templates
-- 'sync:intro'                           Sync intro page with page list
-- 'sync:helpers'                         Sync helpers and other assets
+- 'imagemin'                             Minify images
+- 'processhtml'                          Replace assets paths in html
+- 'cmq'                                  Combine media queries in css files
+- 'autoprefixer'                         Add vendor prefixes in css
+- 'csscomb'                              Applie styleguide to stylesheets
+- 'uglify'                               Minify javascript files
+- 'csso'                                 Minify stylesheets
+- 'browserSync:build'                    Run server on `http://localhost:3000`
 ```
 
-#### Start 
-`grunt start`
+#### Rebuild 
+`grunt rebuild` - Regenerate and build project by running all tasks
 ```
-- 'shell:bower'                          Install bower components
-- 'bower:ie'                             Copy ie components to js folder
-- 'bower:vendor'                         Copy vendor  components to js folder
-- 'clean:gitkeep'                        Remove gitkeep files
-```
-
-#### Regenerate 
-`grunt regenerate`
-```
-- 'coffee'                               Compile coffescript
+- 'coffee:main'                          Compile main coffescript
+- 'coffee:head'                          Compile head coffescript
+- 'coffee:vendor'                        Compile vendor coffescript
 - 'concat:main'                          Concatenate main javascript
 - 'concat:head'                          Concatenate head javascript
 - 'concat:ie'                            Concatenate ie javascript
@@ -213,40 +216,29 @@ Internal task that runs during `default` task to process changed files
 - 'jade'                                 Compile Jade templates
 - 'sync:intro'                           Sync intro page with page list
 - 'sync:helpers'                         Sync helpers and other assets
-- 'clean:build'                          Remove minified files with timestamps
-```
-
-#### Build 
-`grunt build`
-```
 - 'imagemin'                             Minify images
 - 'processhtml'                          Replace assets paths in html
 - 'cmq'                                  Combine media queries in css files
 - 'autoprefixer'                         Add vendor prefixes in css
 - 'csscomb'                              Applie styleguide to stylesheets
-- 'uglify:main'                          Minify main javascript
-- 'uglify:head'                          Minify head javascript
-- 'uglify:ie'                            Minify ie javascript
-- 'uglify:vendor'                        Minify vendor javascript
+- 'uglify'                               Minify javascript files
 - 'csso'                                 Minify stylesheets
-- 'cacheBust'                            Cache static and add timestamps
-- 'browserSync:build'                    Run server on `http://localhost:3000`
 ```
 
 #### Deploy 
-`grunt deploy`
+`grunt deploy` - Commit theme folder and push changes to remote
 ```
 - 'shell:deploy'                         Deploy build version to github
 ```
 
 #### Server 
-`grunt server`
+`grunt server` - Run server for static theme
 ```
 - 'browserSync:main'                    Run server on `http://localhost:3000`
 ```
 
 #### Sprite 
-`grunt sprite`
+`grunt sprite` - Sprite creation task. Should be configured before running
 ```
 - 'sprite'                               Create images sprite and related css
 ```
