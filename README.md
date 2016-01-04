@@ -173,13 +173,13 @@ Here comes groups of grunt tasks with some explanations
 #### Dev
 `gulp dev` - Dev task with static server
 ```
-- 'coffee:main'                          Compile main coffescript
-- 'coffee:head'                          Compile head coffescript
-- 'coffee:vendor'                        Compile vendor coffescript
-- 'concat:main'                          Concatenate main javascript
-- 'concat:head'                          Concatenate head javascript
-- 'concat:ie'                            Concatenate ie javascript
-- 'concat:vendor'                        Concatenate vendor javascript
+- 'coffee:main'                          Compile main coffescripts
+- 'coffee:head'                          Compile head coffescripts
+- 'coffee:vendor'                        Compile vendor coffescripts
+- 'concat:main'                          Concatenate main javascripts
+- 'concat:head'                          Concatenate head javascripts
+- 'concat:ie'                            Concatenate ie javascripts
+- 'concat:vendor'                        Concatenate vendor javascripts
 - 'sass'                                 Compile Sass stylesheets
 - 'stylus'                               Compile Stylus stylesheets
 - 'jade'                                 Compile Jade templates
@@ -199,19 +199,19 @@ Here comes groups of grunt tasks with some explanations
 - 'csscomb'                              Applie styleguide to stylesheets
 - 'uglify'                               Minify javascript files
 - 'csso'                                 Minify stylesheets
-- 'browserSync:build'                    Run server on `http://localhost:3000`
+- 'browserSync:test'                     Run test server without watch
 ```
 
 #### Rebuild 
 `grunt rebuild` - Regenerate and build project by running all tasks
 ```
-- 'coffee:main'                          Compile main coffescript
-- 'coffee:head'                          Compile head coffescript
-- 'coffee:vendor'                        Compile vendor coffescript
-- 'concat:main'                          Concatenate main javascript
-- 'concat:head'                          Concatenate head javascript
-- 'concat:ie'                            Concatenate ie javascript
-- 'concat:vendor'                        Concatenate vendor javascript
+- 'coffee:main'                          Compile main coffescripts
+- 'coffee:head'                          Compile head coffescripts
+- 'coffee:vendor'                        Compile vendor coffescripts
+- 'concat:main'                          Concatenate main javascripts
+- 'concat:head'                          Concatenate head javascripts
+- 'concat:ie'                            Concatenate ie javascripts
+- 'concat:vendor'                        Concatenate vendor javascripts
 - 'sass'                                 Compile Sass stylesheets
 - 'stylus'                               Compile Stylus stylesheets
 - 'jade'                                 Compile Jade templates
@@ -235,7 +235,7 @@ Here comes groups of grunt tasks with some explanations
 #### Server 
 `grunt server` - Run server for static theme
 ```
-- 'browserSync:main'                    Run server on `http://localhost:3000`
+- 'browserSync:test'                     Run test server without watch
 ```
 
 #### Sprite 

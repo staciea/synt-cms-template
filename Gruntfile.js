@@ -15,13 +15,6 @@ module.exports = function(grunt) {
 				devtools: '<%= theme.main %>/static/devtools',
 				html: '<%= theme.main %>'
 			},
-			// Server path
-			server: {
-				main: 'theme',
-				js: '<%= server.main %>/static/js',
-				css: '<%= server.main %>/static/css',
-				html: '<%= server.main %>'
-			},
 			// By default >1%, last 2 versions, Firefox ESR, Opera 12.1;
 			browserlist: [
 				'> 1%',
