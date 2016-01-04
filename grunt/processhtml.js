@@ -4,7 +4,7 @@ module.exports = {
 		files: [{
 			expand: true,
 			cwd: '<%= theme.html %>',
-			src: ['*.html'],
+			src: ['**/*.html'],
 			dest: '<%= theme.html %>',
 			ext: '.html'
 		}],

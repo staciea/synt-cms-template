@@ -2,7 +2,7 @@
 
 Template with cms adjusted structure, based on [front-end-scaffold](https://github.com/orlovmax/front-end-scaffold), with common used technologies and tools.
 
-Please note, this README relates to Grunt template that placed in `master` folder, if you want to use Gulp template  - you can find it in `gulp` branch of this repository.
+Please note, this README relates to Grunt template that placed in `master` branch, if you want to use Gulp template  - you can find it in `gulp` branch of this repository.
 
 ## Contents
 * [Folder structure](#folder-and-file-structure)
@@ -64,6 +64,7 @@ Please note, this README relates to Grunt template that placed in `master` folde
 		│   └── vendor/                        * vendor scripts
 		|
 		├── js/                                * scripts
+		|   ├── main/                          * main site scripts
 		│   ├── ie/                            * ie compat scripts
 		│   ├── head/                          * head scripts
 		│   └── vendor/                        * vendor scripts
