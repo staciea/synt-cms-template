@@ -86,8 +86,7 @@ Please note, this README relates to Grunt template that placed in `master` branc
 		|
 		├── helpers/                           * additional resources
 		|	├── favicon.ico
-		|	├── .htaccess
-		|	└── robots.txt
+		|	└── .htaccess
 		|
 		├── fonts/                             * font sources
 		|
