@@ -12,8 +12,8 @@ module.exports = {
 			src: [
 				'<%= theme.js %>/*.js',
 				'<%= theme.css %>/*.css',
-				'<%= theme.images %>/**/*.{png,jpg,gif,svg}',
-				'<%= theme.html %>/**/*.html'
+				'<%= theme.images %>/**/*.*',
+				'<%= theme.html %>/*.html'
 			]
 		},
 		options: {
