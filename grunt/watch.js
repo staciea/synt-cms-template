@@ -2,10 +2,15 @@
 module.exports = {
 	main: {
 		files: [
+			'<%= theme.coffee %>/main/*.coffee',
+			'<%= theme.coffee %>/head/*.coffee',
+			'<%= theme.coffee %>/vendor/*.coffee',
+			'<%= theme.js %>/main/*.js',
+			'<%= theme.js %>/head/*.js',
+			'<%= theme.js %>/ie/*.js',
+			'<%= theme.js %>/ie/*.js',
 			'<%= theme.sass %>/*.{sass,scss}',
 			'<%= theme.stylus %>/*.styl',
-			'<%= theme.coffee %>/**/*.coffee',
-			'<%= theme.js %>/**/*.js',
 			'<%= theme.jade %>/*.jade',
 			'<%= theme.helpers %>/**/*.*',
 			'<%= theme.helpers %>/.htaccess',

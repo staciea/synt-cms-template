@@ -161,7 +161,7 @@ This project have .editorconfig file at the root that used by your code editor w
 Here comes groups of grunt tasks with some explanations
 
 #### Start 
-`grunt start`
+`grunt start` - Install bower dependencies and place them to dev folders
 ```
 - 'shell:bower'                          Install bower components
 - 'bower:ie'                             Copy ie components to js folder
@@ -184,8 +184,8 @@ Here comes groups of grunt tasks with some explanations
 - 'jade'                                 Compile Jade templates
 - 'sync:intro'                           Sync intro page with page list
 - 'sync:helpers'                         Sync helpers and other assets
-- 'browserSync:dev'                      Run server on `http://localhost:3000`
-- 'watch'                                Watch for changes and run dev task
+- 'browserSync:dev'                      Run server with watch
+- 'watch'                                Watch for changes and run dev tasks
 ```
 
 #### Build 
