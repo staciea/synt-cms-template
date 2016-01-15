@@ -53,7 +53,6 @@ Please note, this README relates to Grunt template that placed in `master` branc
 		├── images/                            * image sources
 		|
 		├── jade/                              * templates
-		│   ├── general/                       * common src
 		│   ├── helpers/                       * helper mixins
 		│   ├── layouts/                       * page layouts
 		│   └── pages/                         * main pages templates
@@ -69,7 +68,7 @@ Please note, this README relates to Grunt template that placed in `master` branc
 		│   ├── head/                          * head scripts
 		│   └── vendor/                        * vendor scripts
 		|
-		├── sass/                              * sass preprocessor styles|	│   ├── general/                       * general styles
+		├── sass/                              * sass preprocessor styles
 		|   ├── helpers/                       * mixins and vars
 		|   ├── ie.sass
 		|   ├── custom.sass
@@ -77,7 +76,6 @@ Please note, this README relates to Grunt template that placed in `master` branc
 		|   └── screen.sass
 		|
 		├── stylus/                            * stylus preprocessor styles
-		│   ├── general/                       * general styles
 		│   ├── helpers/                       * mixins and vars
 		│   ├── ie.styl
 		│   ├── custom.styl

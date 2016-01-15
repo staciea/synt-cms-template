@@ -1,6 +1,10 @@
+//- Include all helpers from one file
+//- Because it's impossible to use recursive folder include
+include _helpers-list
+
 //- Include all blocks from one file
 //- Because it's impossible to use recursive folder include
-include _blocks
+include _blocks-list
 
 //- This block will be filled with required variables
 block variables
@@ -16,7 +20,7 @@ html(lang=pageLang)
 
 	body
 		//- Include content from other layouts
-		block general-content
+		block body-content
 
 		// Browser update screen
 		+ie-out({theme: 'light', lang: pageLang, version: 8})
@@ -25,4 +29,5 @@ html(lang=pageLang)
 		+body-src()
 
 		// GA code
-		// Need some solution with posthtml
+		| <!-- build:template
+		| /build -->
