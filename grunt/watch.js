@@ -1,6 +1,6 @@
 // Run tasks whenever watched files change
 module.exports = {
-	main: {
+	dev: {
 		files: [
 			'<%= theme.coffee %>/main/*.coffee',
 			'<%= theme.coffee %>/head/*.coffee',

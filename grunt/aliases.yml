@@ -23,7 +23,7 @@ dev:
         - 'sync:intro'
         - 'sync:helpers'
         - 'browserSync:dev'
-        - 'watch'
+        - 'watch:dev'
 
 
 build:

@@ -183,7 +183,7 @@ Here comes groups of grunt tasks with some explanations
 - 'sync:intro'                           Sync intro page with page list
 - 'sync:helpers'                         Sync helpers and other assets
 - 'browserSync:dev'                      Run server with watch
-- 'watch'                                Watch for changes and run dev tasks
+- 'watch:dev'                                Watch for changes and run dev tasks
 ```
 
 #### Build 
@@ -224,13 +224,13 @@ Here comes groups of grunt tasks with some explanations
 ```
 
 #### Deploy 
-`grunt deploy` - Commit theme folder and push changes to remote
+`grunt deploy` - Deploy project by running Rakefile: git or ftp push
 ```
 - 'shell:deploy'                         Deploy build version to github
 ```
 
 #### Server 
-`grunt server` - Run server for static theme
+`grunt server` - Run server without watching for changes
 ```
 - 'browserSync:test'                     Run test server without watch
 ```
