@@ -54,6 +54,7 @@ Please note, this README relates to Grunt template that placed in `master` branc
 		|
 		├── jade/                              * templates
 		│   ├── helpers/                       * helper mixins
+		│   ├── vendor/                        * third-party code
 		│   ├── layouts/                       * page layouts
 		│   └── pages/                         * main pages templates
 		|
@@ -70,6 +71,7 @@ Please note, this README relates to Grunt template that placed in `master` branc
 		|
 		├── sass/                              * sass preprocessor styles
 		|   ├── helpers/                       * mixins and vars
+		│   ├── vendor/                        * third-party code
 		|   ├── ie.sass
 		|   ├── custom.sass
 		|   ├── noscript.sass
@@ -77,6 +79,7 @@ Please note, this README relates to Grunt template that placed in `master` branc
 		|
 		├── stylus/                            * stylus preprocessor styles
 		│   ├── helpers/                       * mixins and vars
+		│   ├── vendor/                        * third-party code
 		│   ├── ie.styl
 		│   ├── custom.styl
 		│   ├── noscript.styl
