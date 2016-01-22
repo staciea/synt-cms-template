@@ -9,20 +9,20 @@ include ../_helpers-list
 //- Common used mixin-blocks
 include ../_blocks-list
 
-//- This block will be filled with required variables
+//- This block will be filled with page variables
 block variables
 
 doctype html
 html(lang=pageLang)
 	head
-		// Meta information
-		+head-meta()
+		//- Include page specific content
+		block head-content
 
 		// Head external resources
 		+head-src()
 
 	body
-		//- Include content from other layouts
+		//- Include page specific content
 		block body-content
 
 		// Browser update screen

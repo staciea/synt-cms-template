@@ -3,6 +3,10 @@ extends ../layouts/base
 block variables
 	- var pageLang = 'en';
 
+block head-content
+	// Meta information
+	+head-meta()
+
 block body-content
 	// Main header
 	+header()
