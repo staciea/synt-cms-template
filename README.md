@@ -41,7 +41,7 @@ Please note, this README relates to Grunt template that placed in `master` branc
 └── theme/                                     * main theme folder
 	├── index.html
 	├── page.html
-	└── static/
+	└── static/                                * static assets
 		├── blocks/                            * website blocks library
 		│   └── block/
 		│       ├── block.sass
@@ -186,7 +186,7 @@ Here comes groups of grunt tasks with some explanations
 - 'sync:intro'                           Sync intro page with page list
 - 'sync:helpers'                         Sync helpers and other assets
 - 'browserSync:dev'                      Run server with watch
-- 'watch:dev'                                Watch for changes and run dev tasks
+- 'watch:dev'                            Watch for changes and run dev tasks
 ```
 
 #### Build 
