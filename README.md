@@ -5,6 +5,7 @@ Template with cms adjusted structure, based on [front-end-scaffold](https://gith
 Please note, this README relates to Grunt template that placed in `master` branch, if you want to use Gulp template  - you can find it in `gulp` branch of this repository.
 
 ## Contents
+* [Live project examples](live-project-examples)
 * [Folder structure](#folder-and-file-structure)
 * [Requirements](#requirements)
 * [How to start](#how-to-start)
@@ -21,6 +22,8 @@ Please note, this README relates to Grunt template that placed in `master` branc
 	- [Sprite](#sprite)
 * [Live reload](#live-reload)
 * [License](#license)
+
+## Live project examples
 
 ## Folder and file structure
 
