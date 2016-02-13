@@ -89,6 +89,7 @@ Please note, this README relates to Grunt template that placed in `master` branc
 		│   └── screen.styl
 		|
 		├── helpers/                           * additional resources
+		|	├── index.html
 		|	├── favicon.ico
 		|	└── .htaccess
 		|
@@ -186,7 +187,6 @@ Here comes groups of grunt tasks with some explanations
 - 'sass'                                 Compile Sass stylesheets
 - 'stylus'                               Compile Stylus stylesheets
 - 'jade'                                 Compile Jade templates
-- 'sync:intro'                           Sync intro page with page list
 - 'sync:helpers'                         Sync helpers and other assets
 - 'browserSync:dev'                      Run server with watch
 - 'watch:dev'                            Watch for changes and run dev tasks
@@ -218,7 +218,6 @@ Here comes groups of grunt tasks with some explanations
 - 'sass'                                 Compile Sass stylesheets
 - 'stylus'                               Compile Stylus stylesheets
 - 'jade'                                 Compile Jade templates
-- 'sync:intro'                           Sync intro page with page list
 - 'sync:helpers'                         Sync helpers and other assets
 - 'imagemin'                             Minify images
 - 'processhtml'                          Replace assets paths in html
