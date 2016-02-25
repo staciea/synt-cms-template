@@ -45,17 +45,13 @@ Please note, this README relates to Grunt template that placed in `master` branc
 	├── index.html
 	├── page.html
 	└── static/                                * static assets
-		├── blocks/                            * website blocks library
-		│   └── block/
-		│       ├── block.sass
-		│       ├── block.styl
-		│       └── block.jade
-		|
 		├── css/                               * compiled css
 		|
 		├── images/                            * image sources
 		|
 		├── jade/                              * templates
+		|	├── blocks/                        * blocks library
+		│   |   └── block.jade
 		│   ├── helpers/                       * helper mixins
 		│   ├── vendor/                        * third-party code
 		│   ├── layouts/                       * page layouts
@@ -73,6 +69,8 @@ Please note, this README relates to Grunt template that placed in `master` branc
 		│   └── vendor/                        * vendor scripts
 		|
 		├── sass/                              * sass preprocessor styles
+		|	├── blocks/                        * blocks library
+		│   |   └── block.sass
 		|   ├── helpers/                       * mixins and vars
 		│   ├── vendor/                        * third-party code
 		|   ├── ie.sass
@@ -81,6 +79,8 @@ Please note, this README relates to Grunt template that placed in `master` branc
 		|   └── screen.sass
 		|
 		├── stylus/                            * stylus preprocessor styles
+		|	├── blocks/                        * blocks library
+		│   |   └── block.styl
 		│   ├── helpers/                       * mixins and vars
 		│   ├── vendor/                        * third-party code
 		│   ├── ie.styl
@@ -90,12 +90,13 @@ Please note, this README relates to Grunt template that placed in `master` branc
 		|
 		├── helpers/                           * additional resources
 		|	├── index.html
+		|	├── index_bg.jpg
 		|	├── favicon.ico
 		|	└── .htaccess
 		|
 		├── fonts/                             * font sources
 		|
-		└── devtools/                          * some developer tools
+		└── data/                              * configs and data for templates
 
 ```
 
@@ -247,7 +248,7 @@ Here comes groups of grunt tasks with some explanations
 ```
 
 ## Live reload 
-For this project I use BrowserSync with page reload after assets changing. You can use live.js instead if you want to achieve live coding on LAMP/WAMP server.
+For this project I use BrowserSync with page reload after assets changing.
 
 ## License
 [MIT](http://opensource.org/licenses/MIT)

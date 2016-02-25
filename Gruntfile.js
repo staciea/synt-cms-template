@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 				css: '<%= theme.main %>/static/css',
 				images: '<%= theme.main %>/static/images',
 				helpers: '<%= theme.main %>/static/helpers',
-				devtools: '<%= theme.main %>/static/devtools',
+				data: '<%= theme.main %>/static/data',
 				html: '<%= theme.main %>'
 			},
 			// By default >1%, last 2 versions, Firefox ESR, Opera 12.1;
