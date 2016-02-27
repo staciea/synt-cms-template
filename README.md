@@ -17,7 +17,6 @@ Please note, this README relates to Grunt template that placed in `master` branc
 	- [Dev](#dev)
 	- [Build](#build)
 	- [Rebuild](#rebuild)
-	- [Deploy](#deploy)
 	- [Server](#server)
 	- [Sprite](#sprite)
 * [Live reload](#live-reload)
@@ -34,7 +33,6 @@ Please note, this README relates to Grunt template that placed in `master` branc
 ├── package.json
 ├── bower.json
 ├── README.md
-├── Rakefile
 ├──grunt/                                      * grunt tasks
 |   ├── task.js
 │   └── aliases.yml 
@@ -102,7 +100,6 @@ Please note, this README relates to Grunt template that placed in `master` branc
 
 ## Requirements:
 
-- [Ruby](http://www.ruby-lang.org/)
 - [Node.js](http://nodejs.org/)
 - [Grunt](http://gruntjs.com/) (`npm install -g grunt-cli`)
 - [Bower](http://bower.io/) (`npm install -g bower`)
@@ -227,12 +224,6 @@ Here comes groups of grunt tasks with some explanations
 - 'csscomb'                              Applie styleguide to stylesheets
 - 'uglify'                               Minify javascript files
 - 'csso'                                 Minify stylesheets
-```
-
-#### Deploy 
-`grunt deploy` - Deploy project by running Rakefile: git or ftp push
-```
-- 'shell:deploy'                         Deploy build version to github
 ```
 
 #### Server 

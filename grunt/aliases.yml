@@ -60,12 +60,6 @@ rebuild:
         - 'uglify'
         - 'csso'
 
-
-deploy:
-    description: 'Commit theme folder and push changes to remote'
-    tasks:
-        - 'shell:deploy'
-
 server:
     description: 'Run server for static theme'
     tasks:
