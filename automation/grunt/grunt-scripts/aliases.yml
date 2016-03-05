@@ -64,8 +64,3 @@ server:
     description: 'Run server for static theme'
     tasks:
         - 'browserSync:test'
-
-sprite:
-    description: 'Sprite creation task. Should be configured before running'
-    tasks:
-        - 'sprite'
