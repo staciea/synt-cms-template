@@ -8,7 +8,6 @@ Template with cms adjusted structure, based on [front-end-scaffold](https://gith
 * [Requirements](#requirements)
 	- [Editorconfig](#editorconfig)
 * [How to start](#how-to-start)
-	- [bower.json dependencies](#bowerjson-dependencies)
 * [Tasks](#tasks)
 	- [Start](#start)
 	- [Dev](#dev)
@@ -132,7 +131,7 @@ Before start you need to have installed _npm_ , as well as _grunt_/_gulp_ and _b
 
 Also `bower install` included into `start` task using shell plugin. It will install bependencies and copy them to related folder. See tasks for more details.
 
-#### bower.json dependencies 
+**bower.json dependencies**
 * "jquery"
 * "modernizr"
 * "respond"
