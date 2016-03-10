@@ -13,8 +13,7 @@ module.exports = {
 			'<%= theme.stylus %>/*.styl',
 			'<%= theme.jade %>/*.jade',
 			'<%= theme.helpers %>/**/*.*',
-			'<%= theme.helpers %>/.htaccess',
-			'<%= theme.css %>/*.css'
+			'<%= theme.helpers %>/.htaccess'
 		],
 		tasks: [
 			'newer:coffee:main',
@@ -26,6 +25,7 @@ module.exports = {
 			'newer:concat:vendor',
 			'newer:sass',
 			'newer:stylus',
+			'autoprefixer',
         	'cmq',
 			'newer:jade',
 			'sync:helpers'

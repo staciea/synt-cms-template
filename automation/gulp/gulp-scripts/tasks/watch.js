@@ -1,23 +1,125 @@
 // File watcher that uses super-fast chokidar and emits vinyl objects
 var gulp = require('gulp'),
-	paths = require('../paths');
+	paths = require('../paths'),
+	runSequence = require('run-sequence');
 
 
 // Watch Files For Changes
 gulp.task('watch:dev', function() {
-	gulp.watch(paths.theme.coffee + '/main/*.coffee', ['coffee:main:server']);
-	gulp.watch(paths.theme.coffee + '/head/*.coffee', ['coffee:head:server']);
-	gulp.watch(paths.theme.coffee + '/vendor/*.coffee', ['coffee:vendor:server']);
-	gulp.watch(paths.theme.js + '/main/*.js', ['concat:main:server']);
-	gulp.watch(paths.theme.js + '/head/*.js', ['concat:head:server']);
-	gulp.watch(paths.theme.js + '/ie/*.js', ['concat:ie:server']);
-	gulp.watch(paths.theme.js + '/vendor/*.js', ['concat:vendor:server']);
-	gulp.watch(paths.theme.sass + '/*.{sass,scss}', ['sass:server']);
-	gulp.watch(paths.theme.stylus + '/*.styl', ['stylus:server']);
-	gulp.watch(paths.theme.css + '/*.css', ['mmq']);
-	gulp.watch(paths.theme.jade + '/*.jade', ['jade:server']);
-	gulp.watch([
-		paths.theme.helpers + '/**/*.*',
-		paths.theme.helpers + '/.htaccess'
-	], ['sync:helpers:server']);
+	gulp.watch(
+		paths.theme.coffee + '/main/*.coffee',
+		function() {
+			runSequence(
+				'coffee:main:changed',
+				'browserSync:reload'
+			);
+		}
+	);
+
+	gulp.watch(
+		paths.theme.coffee + '/head/*.coffee',
+		function() {
+			runSequence(
+			'coffee:head:changed',
+			'browserSync:reload'
+			);
+		}
+	);
+
+	gulp.watch(
+		paths.theme.coffee + '/vendor/*.coffee',
+		function() {
+			runSequence(
+			'coffee:vendor:changed',
+			'browserSync:reload'
+			);
+		}
+	);
+
+	gulp.watch(
+		paths.theme.js + '/main/*.js',
+		function() {
+			runSequence(
+			'concat:main:changed',
+			'browserSync:reload'
+			);
+		}
+	);
+
+	gulp.watch(
+		paths.theme.js + '/head/*.js',
+		function() {
+			runSequence(
+			'concat:head:changed',
+			'browserSync:reload'
+			);
+		}
+	);
+
+	gulp.watch(
+		paths.theme.js + '/ie/*.js',
+		function() {
+			runSequence(
+			'concat:ie:changed',
+			'browserSync:reload'
+			);
+		}
+	);
+
+	gulp.watch(
+		paths.theme.js + '/vendor/*.js',
+		function() {
+			runSequence(
+			'concat:vendor:changed',
+			'browserSync:reload'
+			);
+		}
+	);
+
+	gulp.watch(
+		paths.theme.sass + '/*.{sass,scss}',
+		function() {
+			runSequence(
+			'sass:changed',
+			'autoprefixer',
+			'cmq',
+			'browserSync:reload'
+			);
+		}
+	);
+
+	gulp.watch(
+		paths.theme.stylus + '/*.styl',
+		function() {
+			runSequence(
+			'stylus:changed',
+			'autoprefixer',
+			'cmq',
+			'browserSync:reload'
+			);
+		}
+	);
+
+	gulp.watch(
+		paths.theme.jade + '/*.jade',
+		function() {
+			runSequence(
+			'jade:changed',
+			'browserSync:reload'
+			);
+		}
+	);
+
+	gulp.watch(
+		[
+			paths.theme.helpers + '/**/*.*',
+			paths.theme.helpers + '/.htaccess'
+		],
+		function() {
+			runSequence(
+				'sync:helpers:changed',
+				'browserSync:reload'
+			);
+		}
+	);
 });

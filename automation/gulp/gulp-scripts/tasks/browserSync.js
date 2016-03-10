@@ -1,17 +1,16 @@
 // Static server for theme dev
 var gulp = require('gulp'),
 	paths = require('../paths'),
-	browserSync = require('browser-sync').create();
+	browserSync = require('browser-sync');
 
 // Static server
-gulp.task('browserSync', function() {
-	browserSync.init({
-		files: [
-			paths.theme.js + '/*.js',
-			paths.theme.css + '/*.css',
-			paths.theme.images + '/**/*.*',
-			paths.theme.html + '/*.html'
-		],
+gulp.task('browserSync:server', function() {
+	browserSync({
 		server: paths.theme.main
 	});
+});
+
+gulp.task('browserSync:reload', function() {
+	return gulp.src('', {read: false})
+		.pipe(browserSync.reload({stream:true}));
 });

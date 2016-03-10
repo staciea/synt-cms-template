@@ -1,8 +1,6 @@
 // Copy assets
 var gulp = require('gulp'),
-	paths = require('../paths'),
-	browserSync = require('browser-sync').create(),
-	reload = browserSync.reload;
+	paths = require('../paths');
 
 
 // Copy some helpers and devtools.
@@ -16,11 +14,10 @@ gulp.task('sync:helpers', function() {
 });
 
 // Copy some helpers and devtools within watch task
-gulp.task('sync:helpers:server', function() {
+gulp.task('sync:helpers:changed', function() {
 	gulp.src([
 		paths.theme.helpers + '/**/',
 		paths.theme.helpers + '/.htaccess'
 	], {base: paths.theme.helpers})
-		.pipe(gulp.dest(paths.theme.main))
-		.pipe(reload({ stream:true }));
+		.pipe(gulp.dest(paths.theme.main));
 });

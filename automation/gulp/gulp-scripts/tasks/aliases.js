@@ -24,10 +24,11 @@ gulp.task('dev', function() {
 		'concat:vendor',
 		'sass',
 		'stylus',
+		'autoprefixer',
 		'cmq',
 		'jade',
 		'sync:helpers',
-		'browserSync',
+		'browserSync:server',
 		'watch:dev'
 	);
 });
@@ -37,11 +38,10 @@ gulp.task('build', function() {
 	runSequence(
 		'imagemin',
 		'processhtml',
-		'autoprefixer',
 		'csscomb',
 		'uglify',
 		'csso',
-		'browserSync'
+		'browserSync:server'
 	);
 });
 
@@ -57,12 +57,12 @@ gulp.task('rebuild', function() {
 		'concat:vendor',
 		'sass',
 		'stylus',
+		'autoprefixer',
 		'cmq',
 		'jade',
 		'sync:helpers',
 		'imagemin',
 		'processhtml',
-		'autoprefixer',
 		'csscomb',
 		'uglify',
 		'csso'
@@ -70,4 +70,4 @@ gulp.task('rebuild', function() {
 });
 
 // Run server for static theme
-gulp.task('server', ['browserSync']);
+gulp.task('server', ['browserSync:server']);
