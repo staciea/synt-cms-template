@@ -1,5 +1,9 @@
 module.exports = function(grunt) {
-	require('load-grunt-config')(grunt-scripts, {
+    var path = require('path');
+	require('load-grunt-config')(grunt_scripts, {
+		configPath: [
+			path.join(process.cwd(), 'grunt_scripts')
+		],
 		data: {
 			// Theme paths
 			theme: {
