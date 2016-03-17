@@ -31,17 +31,25 @@ Template with cms adjusted structure, based on [front-end-scaffold](https://gith
 |
 ├── _automation/                               * build systems
 |	├── _grunt/                                * grunt build system
-|	|	├──grunt_scripts/                      * grunt tasks
-|	|	|   ├── task.js
-|	|	│   └── aliases.yml
+|	|	├──grunt_tasks/                        * grunt tasks
+|		|   ├── config/                        * grunt tasks config
+|	|	│   |	├── paths.js
+|	|	│   |	├── settings.js
+|	|	│   |	└── aliases.js
+|	|	│   |
+|	|	|   └── task.js
 |	|	│
 |	|	├── Gruntfile.js
 |	|	└── package.json
 |	|
 |	└── _gulp/                                 * gulp build system
-|		├──gulp_scripts/                       * gulp tasks
-|		|   ├── tasks/
-|		│   └── paths.js
+|		├──gulp_tasks/                         * gulp tasks
+|		|   ├── config/                        * gulp tasks config
+|		│   |	├── paths.js
+|		│   |	├── settings.js
+|		│   |	└── aliases.js
+|		│   |
+|		|   └── task.js
 |		│
 |		├── gulpfile.js
 |		└── package.json

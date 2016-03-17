@@ -1,33 +1,10 @@
 module.exports = function(grunt) {
     var path = require('path');
-	require('load-grunt-config')(grunt_scripts, {
+	require('load-grunt-config')(grunt, {
 		configPath: [
-			path.join(process.cwd(), 'grunt_scripts')
+			path.join(process.cwd(), 'grunt_tasks'),
+			path.join(process.cwd(), 'grunt_tasks/config')
 		],
-		data: {
-			// Theme paths
-			theme: {
-				main: 'theme',
-				coffee: '<%= theme.main %>/static/coffee',
-				js: '<%= theme.main %>/static/js',
-				jade: '<%= theme.main %>/static/jade/pages',
-				sass: '<%= theme.main %>/static/sass',
-				stylus: '<%= theme.main %>/static/stylus',
-				css: '<%= theme.main %>/static/css',
-				images: '<%= theme.main %>/static/images',
-				helpers: '<%= theme.main %>/static/helpers',
-				data: '<%= theme.main %>/static/data',
-				html: '<%= theme.main %>'
-			},
-			// By default >1%, last 2 versions, Firefox ESR, Opera 12.1;
-			browserlist: [
-				'> 1%',
-				'last 20 versions',
-				'Opera 12.1',
-				'Explorer > 7',
-				'Safari >= 5'
-			]
-		},
 		loadGruntTasks: {
 			pattern: ['grunt-*', 'main-*'],
 			config: require('./package.json'),
