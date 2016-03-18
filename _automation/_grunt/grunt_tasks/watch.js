@@ -2,9 +2,7 @@
 module.exports = {
 	dev: {
 		files: [
-			'<%= paths.theme.coffee %>/main/*.coffee',
-			'<%= paths.theme.coffee %>/head/*.coffee',
-			'<%= paths.theme.coffee %>/vendor/*.coffee',
+			'<%= paths.theme.coffee %>/**/*.coffee',
 			'<%= paths.theme.js %>/main/*.js',
 			'<%= paths.theme.js %>/head/*.js',
 			'<%= paths.theme.js %>/ie/*.js',
@@ -16,9 +14,7 @@ module.exports = {
 			'<%= paths.theme.helpers %>/.htaccess'
 		],
 		tasks: [
-			'newer:coffee:main',
-			'newer:coffee:head',
-			'newer:coffee:vendor',
+			'newer:coffee',
 			'newer:concat:main',
 			'newer:concat:head',
 			'newer:concat:ie',

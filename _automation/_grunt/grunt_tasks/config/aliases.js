@@ -9,9 +9,7 @@ module.exports = {
 
 	// Dev task with static server
 	'dev': [
-		'coffee:main',
-		'coffee:head',
-		'coffee:vendor',
+		'coffee',
 		'concat:main',
 		'concat:head',
 		'concat:ie',
@@ -38,9 +36,7 @@ module.exports = {
 
 	// Regenerate and build project by running all tasks
 	'rebuild': [
-		'coffee:main',
-		'coffee:head',
-		'coffee:vendor',
+		'coffee',
 		'concat:main',
 		'concat:head',
 		'concat:ie',
