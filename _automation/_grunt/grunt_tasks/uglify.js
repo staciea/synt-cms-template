@@ -6,10 +6,9 @@ module.exports = {
 	main: {
 		files:[{
 			expand: true,
-			cwd: '<%= paths.theme.js/bundle %>',
-			src: ['*.js', '!*.min.js'],
-			dest: '<%= paths.theme.js/bundle %>',
-			ext: '.min.js'
+			cwd: '<%= paths.theme.js %>',
+			src: ['*.min.js'],
+			dest: '<%= paths.theme.js %>'
 		}]
 	}
 }

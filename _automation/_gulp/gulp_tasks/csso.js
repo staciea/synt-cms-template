@@ -8,10 +8,7 @@ var gulp = require('gulp'),
 
 //Minify *.css files
 gulp.task('csso', function () {
-	return gulp.src([
-		paths.theme.css + '/*.css',
-		'!' + paths.theme.css + '/*.min.css'
-	])
+	return gulp.src(paths.theme.css + '/*.min.css')
 		.pipe(plumber())
 		.pipe(csso({
 			advanced: false,
@@ -19,6 +16,5 @@ gulp.task('csso', function () {
 			restructuring:false,
 			compatibility: 'ie7'
 		}))
-		.pipe(rename({suffix: '.min'}))
 		.pipe(gulp.dest(paths.theme.css));
 });

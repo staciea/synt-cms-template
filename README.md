@@ -31,8 +31,8 @@ Template with cms adjusted structure, based on [front-end-scaffold](https://gith
 |
 ├── _automation/                               * build systems
 |	├── _grunt/                                * grunt build system
-|	|	├──grunt_tasks/                        * grunt tasks
-|		|   ├── config/                        * grunt tasks config
+|	|	├── grunt_tasks/                       * grunt tasks
+|	|	|   ├── config/                        * grunt tasks config
 |	|	│   |	├── paths.js
 |	|	│   |	├── settings.js
 |	|	│   |	└── aliases.js
@@ -43,7 +43,7 @@ Template with cms adjusted structure, based on [front-end-scaffold](https://gith
 |	|	└── package.json
 |	|
 |	└── _gulp/                                 * gulp build system
-|		├──gulp_tasks/                         * gulp tasks
+|		├── gulp_tasks/                        * gulp tasks
 |		|   ├── config/                        * gulp tasks config
 |		│   |	├── paths.js
 |		│   |	├── settings.js
@@ -165,11 +165,12 @@ Gulp: `gulp dev`
 - 'rigger'                               Concatenate javascripts
 - 'sass'                                 Compile Sass stylesheets
 - 'stylus'                               Compile Stylus stylesheets
+- 'autoprefixer'                         Add vendor prefixes in css
 - 'cmq'                                  Combine media queries in css files
 - 'jade'                                 Compile Jade templates
 - 'sync:helpers'                         Sync helpers and other assets
 - 'browserSync'                          Run dev server with watch option
-- 'watch:dev'                            Watch for changes and run dev task
+- 'watch:all'                            Watch for changes and run dev task
 ```
 
 #### Build 
@@ -178,8 +179,6 @@ Grunt: `grunt build`
 Gulp: `gulp build`
 ```
 - 'imagemin'                             Minify images
-- 'processhtml'                          Replace assets paths in html
-- 'autoprefixer'                         Add vendor prefixes in css
 - 'csscomb'                              Applie styleguide to stylesheets
 - 'uglify'                               Minify javascript files
 - 'csso'                                 Minify stylesheets
@@ -195,12 +194,11 @@ Gulp: `gulp rebuild`
 - 'rigger'                               Concatenate javascripts
 - 'sass'                                 Compile Sass stylesheets
 - 'stylus'                               Compile Stylus stylesheets
+- 'autoprefixer'                         Add vendor prefixes in css
 - 'cmq'                                  Combine media queries in css files
 - 'jade'                                 Compile Jade templates
 - 'sync:helpers'                         Sync helpers and other assets
 - 'imagemin'                             Minify images
-- 'processhtml'                          Replace assets paths in html
-- 'autoprefixer'                         Add vendor prefixes in css
 - 'csscomb'                              Applie styleguide to stylesheets
 - 'uglify'                               Minify javascript files
 - 'csso'                                 Minify stylesheets

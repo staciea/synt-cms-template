@@ -7,10 +7,7 @@ var gulp = require('gulp'),
 
 //Autoprefixer
 gulp.task('csscomb', function () {
-	return gulp.src([
-		paths.theme.css + '/*.css',
-		'!' + paths.theme.css + '/*.min.css'
-	])
+	return gulp.src(paths.theme.css + '/*.min.css')
 		.pipe(plumber())
 		.pipe(csscomb())
 		.pipe(gulp.dest(paths.theme.css));

@@ -18,10 +18,14 @@ gulp.task('watch:all', function() {
 	);
 
 	gulp.watch(
-		paths.theme.js + '/*.js',
+		[
+			paths.theme.js + '/*.js',
+			'!' + paths.theme.js + '/*.min.js',
+			paths.theme.js + '/lib/*.js'
+		],
 		function() {
 			runSequence(
-			'rigger:changed',
+			'rigger',
 			'browserSync:reload'
 			);
 		}

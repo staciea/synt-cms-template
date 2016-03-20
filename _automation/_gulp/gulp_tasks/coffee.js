@@ -3,7 +3,8 @@ var gulp = require('gulp'),
 	paths = require('./config/paths'),
 	plumber = require('gulp-plumber'),
 	changed = require('gulp-changed'),
-	coffee = require('gulp-coffee');
+	coffee = require('gulp-coffee'),
+	rename = require('gulp-rename');
 
 
 //Compile main *.coffee files
@@ -11,6 +12,7 @@ gulp.task('coffee', function() {
 	return gulp.src([paths.theme.coffee + '/*.coffee'])
 		.pipe(plumber())
 		.pipe(coffee({bare: true}))
+		.pipe(rename({suffix: '.coffee'}))
 		.pipe(gulp.dest(paths.theme.js + '/lib'));
 });
 
@@ -18,7 +20,8 @@ gulp.task('coffee', function() {
 gulp.task('coffee:changed', function() {
 	return gulp.src([paths.theme.coffee + '/*.coffee'])
 		.pipe(plumber())
-		.pipe(changed(paths.theme.js, {extension: '.js'}))
+		.pipe(changed(paths.theme.js + '/lib', {extension: '.coffee.js'}))
 		.pipe(coffee({bare: true}))
+		.pipe(rename({suffix: '.coffee'}))
 		.pipe(gulp.dest(paths.theme.js + '/lib'));
 });

@@ -10,7 +10,7 @@ module.exports = {
 			cwd: '<%= paths.theme.sass %>',
 			src: [ '*.{sass,scss}' ],
 			dest: '<%= paths.theme.css %>',
-			ext: '.css'
+			ext: '.min.css'
 		}]
 	}
 }

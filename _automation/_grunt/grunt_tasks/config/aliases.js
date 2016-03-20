@@ -23,7 +23,6 @@ module.exports = {
 	// Build task
 	'build': [
 		'imagemin',
-		'processhtml',
 		'csscomb',
 		'uglify',
 		'csso',
@@ -41,7 +40,6 @@ module.exports = {
 		'jade',
 		'sync:helpers',
 		'imagemin',
-		'processhtml',
 		'csscomb',
 		'uglify',
 		'csso'

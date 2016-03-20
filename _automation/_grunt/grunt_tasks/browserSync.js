@@ -10,8 +10,8 @@ module.exports = {
 	dev:{
 		bsFiles: {
 			src: [
-				'<%= paths.theme.js %>/*.js',
-				'<%= paths.theme.css %>/*.css',
+				'<%= paths.theme.js %>/*.min.js',
+				'<%= paths.theme.css %>/*.min.css',
 				'<%= paths.theme.images %>/**/*.*',
 				'<%= paths.theme.html %>/*.html'
 			]

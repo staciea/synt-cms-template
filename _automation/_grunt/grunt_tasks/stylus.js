@@ -10,7 +10,7 @@ module.exports = {
 			cwd: '<%= paths.theme.stylus %>',
 			src: [ '*.styl' ],
 			dest: '<%= paths.theme.css %>',
-			ext: '.css'
+			ext: '.min.css'
 		}]
 	}
 }

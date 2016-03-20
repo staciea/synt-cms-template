@@ -12,7 +12,7 @@ module.exports = {
 		],
 		tasks: [
 			'newer:coffee',
-			'newer:rigger',
+			'rigger',
 			'newer:sass',
 			'newer:stylus',
 			'autoprefixer',

@@ -31,7 +31,6 @@ gulp.task('dev', function() {
 gulp.task('build', function() {
 	runSequence(
 		'imagemin',
-		'processhtml',
 		'csscomb',
 		'uglify',
 		'csso',
@@ -51,7 +50,6 @@ gulp.task('rebuild', function() {
 		'jade',
 		'sync:helpers',
 		'imagemin',
-		'processhtml',
 		'csscomb',
 		'uglify',
 		'csso'
