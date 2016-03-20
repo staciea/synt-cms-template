@@ -5,52 +5,23 @@ var gulp = require('gulp'),
 
 
 // Watch Files For Changes
-gulp.task('watch:dev', function() {
+gulp.task('watch:all', function() {
 	gulp.watch(
-		paths.theme.coffee + '/**/*.coffee',
+		paths.theme.coffee + '/*.coffee',
 		function() {
 			runSequence(
 				'coffee:changed',
+				'rigger',
 				'browserSync:reload'
 			);
 		}
 	);
 
 	gulp.watch(
-		paths.theme.js + '/main/*.js',
+		paths.theme.js + '/*.js',
 		function() {
 			runSequence(
-			'concat:main:changed',
-			'browserSync:reload'
-			);
-		}
-	);
-
-	gulp.watch(
-		paths.theme.js + '/head/*.js',
-		function() {
-			runSequence(
-			'concat:head:changed',
-			'browserSync:reload'
-			);
-		}
-	);
-
-	gulp.watch(
-		paths.theme.js + '/ie/*.js',
-		function() {
-			runSequence(
-			'concat:ie:changed',
-			'browserSync:reload'
-			);
-		}
-	);
-
-	gulp.watch(
-		paths.theme.js + '/vendor/*.js',
-		function() {
-			runSequence(
-			'concat:vendor:changed',
+			'rigger:changed',
 			'browserSync:reload'
 			);
 		}

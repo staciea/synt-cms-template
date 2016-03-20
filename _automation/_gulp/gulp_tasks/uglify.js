@@ -8,11 +8,11 @@ var gulp = require('gulp'),
 
 gulp.task('uglify', function() {
 	return gulp.src([
-		paths.theme.js + '/*.js',
-		'!' + paths.theme.js + '/*.min.js'
+		paths.theme.js + '/bundle/*.js',
+		'!' + paths.theme.js + '/bundle/*.min.js'
 	])
 		.pipe(plumber())
 		.pipe(uglify())
 		.pipe(rename({suffix: '.min'}))
-		.pipe(gulp.dest(paths.theme.js));
+		.pipe(gulp.dest(paths.theme.js + '/bundle'));
 });

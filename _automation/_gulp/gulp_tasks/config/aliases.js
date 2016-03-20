@@ -6,8 +6,7 @@ var gulp = require('gulp'),
 gulp.task('start', function() {
 	runSequence(
 		'shell:bower',
-		'bower:ie',
-		'bower:vendor',
+		'bower',
 		'clean:gitkeep'
 	);
 });
@@ -16,10 +15,7 @@ gulp.task('start', function() {
 gulp.task('dev', function() {
 	runSequence(
 		'coffee',
-		'concat:main',
-		'concat:head',
-		'concat:ie',
-		'concat:vendor',
+		'rigger',
 		'sass',
 		'stylus',
 		'autoprefixer',
@@ -27,7 +23,7 @@ gulp.task('dev', function() {
 		'jade',
 		'sync:helpers',
 		'browserSync:server',
-		'watch:dev'
+		'watch:all'
 	);
 });
 
@@ -47,10 +43,7 @@ gulp.task('build', function() {
 gulp.task('rebuild', function() {
 	runSequence(
 		'coffee',
-		'concat:main',
-		'concat:head',
-		'concat:ie',
-		'concat:vendor',
+		'rigger',
 		'sass',
 		'stylus',
 		'autoprefixer',

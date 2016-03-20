@@ -73,15 +73,13 @@ Template with cms adjusted structure, based on [front-end-scaffold](https://gith
 		│   └── pages/                         * main pages templates
 		|
 		├── coffee/                            * coffeescripts
-		│   ├── main/                          * main scripts
-		│   ├── head/                          * head scripts
-		│   └── vendor/                        * vendor scripts
 		|
 		├── js/                                * scripts
-		|   ├── main/                          * main site scripts
-		│   ├── ie/                            * ie compat scripts
-		│   ├── head/                          * head scripts
-		│   └── vendor/                        * vendor scripts
+		|   ├── vendor/                        * vendor scripts library
+		|   ├── lib/                           * site scripts library
+		│   ├── ie.js                          * ie compat scripts
+		│   ├── head.js                        * head scripts
+		│   └── body.js                        * vendor scripts
 		|
 		├── sass/                              * sass preprocessor styles
 		|	├── blocks/                        * blocks library
@@ -154,8 +152,7 @@ Grunt: `grunt start`
 Gulp: `gulp start`
 ```
 - 'shell:bower'                          Install bower components
-- 'bower:ie'                             Copy ie components to js folder
-- 'bower:vendor'                         Copy vendor  components to js folder
+- 'bower'                                Copy bower components to js folder
 - 'clean:gitkeep'                        Remove gitkeep files
 ```
 
@@ -164,11 +161,8 @@ Dev task with static server.
 Grunt: `grunt dev` 
 Gulp: `gulp dev`
 ```
-- 'coffee'                               Compile main coffescripts
-- 'concat:main'                          Concatenate main javascripts
-- 'concat:head'                          Concatenate head javascripts
-- 'concat:ie'                            Concatenate ie javascripts
-- 'concat:vendor'                        Concatenate vendor javascripts
+- 'coffee'                               Compile coffescripts
+- 'rigger'                               Concatenate javascripts
 - 'sass'                                 Compile Sass stylesheets
 - 'stylus'                               Compile Stylus stylesheets
 - 'cmq'                                  Combine media queries in css files
@@ -197,11 +191,8 @@ Regenerate and build project by running all tasks.
 Grunt: `grunt rebuild` 
 Gulp: `gulp rebuild`
 ```
-- 'coffee'                               Compile main coffescripts
-- 'concat:main'                          Concatenate main javascripts
-- 'concat:head'                          Concatenate head javascripts
-- 'concat:ie'                            Concatenate ie javascripts
-- 'concat:vendor'                        Concatenate vendor javascripts
+- 'coffee'                               Compile coffescripts
+- 'rigger'                               Concatenate javascripts
 - 'sass'                                 Compile Sass stylesheets
 - 'stylus'                               Compile Stylus stylesheets
 - 'cmq'                                  Combine media queries in css files
