@@ -10,7 +10,7 @@ var gulp = require('gulp'),
 gulp.task('rigger', function() {
 	return gulp.src([
 		paths.theme.js + '/*.js',
-		'!' + paths.theme.js + '/*.js'
+		'!' + paths.theme.js + '/*.min.js'
 	])
 		.pipe(plumber())
 		.pipe(rigger())
