@@ -3,6 +3,8 @@ var gulp = require('gulp'),
 	paths = require('./config/paths'),
 	plumber = require('gulp-plumber'),
 	changed = require('gulp-changed'),
+	data = require('gulp-data'),
+	fs = require('fs'),
 	jade = require('gulp-jade');
 
 
@@ -10,6 +12,9 @@ var gulp = require('gulp'),
 gulp.task('jade', function() {
 	return gulp.src(paths.theme.jade + '/*.jade')
 		.pipe(plumber())
+		.pipe(data(function(file) {
+			return { 'config': JSON.parse(fs.readFileSync(paths.theme.data + '/config.json'))}
+		}))
 		.pipe(jade({
 			client: false,
 			pretty: true
@@ -24,6 +29,9 @@ gulp.task('jade:changed', function() {
 	return gulp.src(paths.theme.jade + '/*.jade')
 		.pipe(plumber())
 		.pipe(changed(paths.theme.html, {extension: '.html'}))
+		.pipe(data(function(file) {
+			return { 'config': JSON.parse(fs.readFileSync(paths.theme.data + '/config.json'))}
+		}))
 		.pipe(jade({
 			client: false,
 			pretty: true

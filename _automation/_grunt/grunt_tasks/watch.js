@@ -1,23 +1,84 @@
 // Run tasks whenever watched files change
 module.exports = {
-	all: {
+	coffee: {
 		files: [
-			'<%= paths.theme.coffee %>/*.coffee',
+			'<%= paths.theme.coffee %>/*.coffee'
+		],
+		tasks: [
+			'newer:coffee',
+			'rigger'
+		],
+		options: {
+			spawn: false
+		}
+	},
+	js: {
+		files: [
 			'<%= paths.theme.js %>/*.js',
-			'<%= paths.theme.sass %>/*.{sass,scss}',
-			'<%= paths.theme.stylus %>/*.styl',
-			'<%= paths.theme.jade %>/*.jade',
+			'<%= paths.theme.js %>/lib/*.js'
+		],
+		tasks: [
+			'rigger'
+		],
+		options: {
+			spawn: false
+		}
+	},
+	sass: {
+		files: [
+			'<%= paths.theme.sass %>/*.{sass,scss}'
+		],
+		tasks: [
+			'newer:sass',
+			'autoprefixer',
+        	'cmq'
+		],
+		options: {
+			spawn: false
+		}
+	},
+	stylus: {
+		files: [
+			'<%= paths.theme.stylus %>/*.styl'
+		],
+		tasks: [
+			'newer:stylus',
+			'autoprefixer',
+        	'cmq'
+		],
+		options: {
+			spawn: false
+		}
+	},
+	data: {
+		files: [
+			'<%= paths.theme.data %>/*.*'
+		],
+		tasks: [
+			'async_jade_data',
+			'jade'
+		],
+		options: {
+			spawn: false
+		}
+	},
+	jade: {
+		files: [
+			'<%= paths.theme.jade %>/*.jade'
+		],
+		tasks: [
+			'newer:jade'
+		],
+		options: {
+			spawn: false
+		}
+	},
+	helpers: {
+		files: [
 			'<%= paths.theme.helpers %>/**/*.*',
 			'<%= paths.theme.helpers %>/.htaccess'
 		],
 		tasks: [
-			'newer:coffee',
-			'rigger',
-			'newer:sass',
-			'newer:stylus',
-			'autoprefixer',
-        	'cmq',
-			'newer:jade',
 			'sync:helpers'
 		],
 		options: {

@@ -8,6 +8,7 @@ Template with cms adjusted structure, based on [front-end-scaffold](https://gith
 * [Requirements](#requirements)
 	- [Editorconfig](#editorconfig)
 * [How to start](#how-to-start)
+* [Site configuration](#site-configuration)
 * [Tasks](#tasks)
 	- [Start](#start)
 	- [Dev](#dev)
@@ -129,11 +130,12 @@ If you haven't used [Gulp](http://gulpjs.com/) before, be sure to check out the 
 
 Before start you need to have installed _npm_ , as well as _grunt_/_gulp_ and _bower_ globally.
 
-**Four simple steps to start:**
+**A few simple simple steps to start:**
 * Download these files. You can chose `Download zip` option or clone this repo to your local maschine.
 * Now go to this project folder in terminal. Run `automation.sh` script by typing `bash automation.sh` or `sh automation.sh` and choose build system - it will extract Grunt or Gulp scripts from the `_automation` directory into project folder. Or you can manually copy all necessary files from `_automation/_build-system-name`
 * Install dependencies from `package.json` by running: `npm install` and bower dependencies from `bower.json`: `bower install`. This will create `node_moduldes` and `bower_components` folders.
 * Run tasks from the list below and start devevelopment! 
+* Edit general settings in `dev/data/config.json` See [Site configuration](#site-configuration) section
 
 Also `bower install` included into `start` task using shell plugin. It will install bependencies and copy them to related folder. See tasks for more details.
 
@@ -142,6 +144,10 @@ Also `bower install` included into `start` task using shell plugin. It will inst
 * "modernizr"
 * "respond"
 * "html5shiv"
+
+## Site configuration
+This boilerplate use Jade templates with external data configs. 
+Main settings can be found in `dev/data/config.json` file. And they're available for usage in templates with `config.key-name`
 
 ## Tasks
 Here comes groups of grunt and gulp tasks with some explanations
@@ -178,7 +184,6 @@ Grunt: `grunt build` Gulp: `gulp build`
 * Apply styleguide to stylesheets
 * Minify javascript files
 * Minify stylesheets
-* Minify html
 * Run BrowserSync static server 
 
 
@@ -198,8 +203,7 @@ Grunt: `grunt rebuild` Gulp: `gulp rebuild`
 * Apply styleguide to stylesheets
 * Minify javascript files
 * Minify stylesheets
-* Minify html
-
+* 
 
 #### Server 
 Run server without watching for changes.

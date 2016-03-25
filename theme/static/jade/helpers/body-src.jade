@@ -1,4 +1,11 @@
 mixin body-src()
-	<!-- build:js static/js/bundle/body.min.js -->
-	script(src='static/js/bundle/body.js')
-	<!-- /build -->
+	//- Browser update screen
+	if config.modules.ieMessage
+		+ie-out({theme: 'light', lang: config.site.lang, version: 8})
+
+	//- Body javascript
+	script(src='static/js/body.min.js')
+
+	//- Google analytics code
+	if config.modules.googleAnalytics
+		+google-analytics()

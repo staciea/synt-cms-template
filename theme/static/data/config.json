@@ -1,0 +1,24 @@
+{
+	"site": {
+		"lang": "en",
+		"title": "Synteagle cms project template",
+		"titleDelim": " | ",
+		"description": "CMS adjusted template with block-oriented structure based on Grunt/Gulp task runners",
+		"keywords": "Front-end template, project template, boilerplate, web starter kit",
+		"url": "===site-full-url==="
+	},
+	"modules": {
+		"headJs": true,
+		"ieJs": true,
+		"customCss": true,
+		"noscriptCss": true,
+		"ieCss": true,
+		"ieMessage": true,
+		"googleAnalytics": true,
+		"twitterCard": true,
+		"openGraph": true
+	},
+	"links": {
+		"twitterCard": "===twittercard-validation-account==="
+	}
+}

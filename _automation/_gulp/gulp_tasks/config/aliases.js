@@ -23,7 +23,7 @@ gulp.task('dev', function() {
 		'jade',
 		'sync:helpers',
 		'browserSync:server',
-		'watch:all'
+		'watch'
 	);
 });
 

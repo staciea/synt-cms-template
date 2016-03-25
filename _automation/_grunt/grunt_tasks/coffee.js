@@ -5,7 +5,7 @@ module.exports = {
 		flatten: true,
 		cwd: '<%= paths.theme.coffee %>',
 		src: ['*.coffee'],
-		dest: '<%= paths.theme.js/lib %>',
+		dest: '<%= paths.theme.js %>/lib',
 		ext: '.coffee.js',
 		extDot: 'last'
 	}
