@@ -1,14 +1,3 @@
-//- Mixins:
-//- bemto mixin for Jade and BEM magic
-//- outdated ie stub
-include ../_vendor-list
-
-//- website helpers: meta information, head and body assets src
-include ../_helpers-list
-
-//- Common used mixin-blocks
-include ../_blocks-list
-
 //- This block will be filled with page variables
 block variables
 
@@ -16,10 +5,10 @@ doctype html
 html(lang="#{config.site.lang}")
 	head
 		//- Meta information
-		+head-meta()
+		include ../helpers/head-meta
 
 		//- Head external resources
-		+head-src()
+		include ../helpers/head-src
 
 		//- Include page specific content
 		block head-content
@@ -29,4 +18,4 @@ html(lang="#{config.site.lang}")
 		block body-content
 
 		//- Body assets
-		+body-src()
+		include ../helpers/body-src

@@ -8,13 +8,7 @@
 		"url": "===site-full-url==="
 	},
 	"modules": {
-		"headJs": true,
-		"ieJs": true,
 		"customCss": true,
-		"noscriptCss": true,
-		"ieCss": true,
-		"ieMessage": true,
-		"googleAnalytics": true,
 		"twitterCard": true,
 		"openGraph": true
 	},

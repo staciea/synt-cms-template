@@ -14,10 +14,8 @@ gulp.task('start', function() {
 // Dev task with static server
 gulp.task('dev', function() {
 	runSequence(
-		'coffee',
 		'rigger',
 		'sass',
-		'stylus',
 		'autoprefixer',
 		'cmq',
 		'jade',
@@ -41,10 +39,8 @@ gulp.task('build', function() {
 // Regenerate and build project by running all tasks
 gulp.task('rebuild', function() {
 	runSequence(
-		'coffee',
 		'rigger',
 		'sass',
-		'stylus',
 		'autoprefixer',
 		'cmq',
 		'jade',
