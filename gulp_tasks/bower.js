@@ -11,15 +11,6 @@ gulp.task('bower', function() {
 		overrides: {
 			jquery: {
 				main: "dist/jquery.js"
-			},
-			modernizr: {
-				main: "modernizr.js"
-			},
-			html5shiv: {
-				main: "dist/html5shiv.js"
-			},
-			respond: {
-				main: "src/respond.js"
 			}
 		}
 	}))
