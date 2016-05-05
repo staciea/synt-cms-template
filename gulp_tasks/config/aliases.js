@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 gulp.task('start', function() {
 	runSequence(
 		'shell:bower',
-		'bower',
+		'bower:main',
 		'clean:gitkeep'
 	);
 });
@@ -14,11 +14,10 @@ gulp.task('start', function() {
 // Dev task with static server
 gulp.task('dev', function() {
 	runSequence(
-		'rigger',
-		'sass',
-		'autoprefixer',
-		'cmq',
-		'jade',
+		'rigger:main',
+		'sass:main',
+		'postcss:dev',
+		'jade:main',
 		'sync:helpers',
 		'browserSync:server',
 		'watch'
@@ -28,10 +27,9 @@ gulp.task('dev', function() {
 // Build task
 gulp.task('build', function() {
 	runSequence(
-		'imagemin',
-		'csscomb',
-		'uglify',
-		'csso',
+		'imagemin:main',
+		'uglify:main',
+		'postcss:build',
 		'browserSync:server'
 	);
 });
@@ -39,16 +37,14 @@ gulp.task('build', function() {
 // Regenerate and build project by running all tasks
 gulp.task('rebuild', function() {
 	runSequence(
-		'rigger',
-		'sass',
-		'autoprefixer',
-		'cmq',
-		'jade',
+		'rigger:main',
+		'sass:main',
+		'postcss:dev',
+		'jade:main',
 		'sync:helpers',
-		'imagemin',
-		'csscomb',
-		'uglify',
-		'csso'
+		'imagemin:main',
+		'uglify:main',
+		'postcss:build'
 	);
 });
 

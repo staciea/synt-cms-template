@@ -8,45 +8,44 @@ var gulp = require('gulp'),
 gulp.task('watch', function() {
 	gulp.watch(
 		[
-			paths.theme.js + '/*.js',
-			'!' + paths.theme.js + '/*.min.js',
-			paths.theme.js + '/lib/*.js'
+			paths.dev.js + '/*.js',
+			'!' + paths.dev.js + '/*.min.js',
+			paths.dev.js + '/lib/*.js'
 		],
 		function() {
 			runSequence(
-			'rigger',
+			'rigger:main',
 			'browserSync:reload'
 			);
 		}
 	);
 
 	gulp.watch(
-		paths.theme.sass + '/*.{sass,scss}',
+		paths.dev.sass + '/*.{sass,scss}',
 		function() {
 			runSequence(
-			'sass:changed',
-			'autoprefixer',
-			'cmq',
+			'sass:main:changed',
+			'postcss:dev',
 			'browserSync:reload'
 			);
 		}
 	);
 
 	gulp.watch(
-		paths.theme.data + '/*.*',
+		paths.dev.data + '/*.*',
 		function() {
 			runSequence(
-			'jade',
+			'jade:main',
 			'browserSync:reload'
 			);
 		}
 	);
 
 	gulp.watch(
-		paths.theme.jade + '/*.jade',
+		paths.dev.jade + '/*.jade',
 		function() {
 			runSequence(
-			'jade:changed',
+			'jade:main:changed',
 			'browserSync:reload'
 			);
 		}
@@ -54,8 +53,8 @@ gulp.task('watch', function() {
 
 	gulp.watch(
 		[
-			paths.theme.helpers + '/**/*.*',
-			paths.theme.helpers + '/.htaccess'
+			paths.dev.helpers + '/**/*.*',
+			paths.dev.helpers + '/.htaccess'
 		],
 		function() {
 			runSequence(

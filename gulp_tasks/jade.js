@@ -9,11 +9,11 @@ var gulp = require('gulp'),
 
 
 //Compile *.jade files
-gulp.task('jade', function() {
-	return gulp.src(paths.theme.jade + '/*.jade')
+gulp.task('jade:main', function() {
+	return gulp.src(paths.dev.jade + '/*.jade')
 		.pipe(plumber())
 		.pipe(data(function(file) {
-			return { 'config': JSON.parse(fs.readFileSync(paths.theme.data + '/config.json'))}
+			return { 'config': JSON.parse(fs.readFileSync(paths.dev.data + '/config.json'))}
 		}))
 		.pipe(jade({
 			client: false,
@@ -21,16 +21,16 @@ gulp.task('jade', function() {
 		}).on('error', function(err) {
 			console.log(err);
 		}))
-		.pipe(gulp.dest(paths.theme.html));
+		.pipe(gulp.dest(paths.build.html));
 });
 
 //Compile *.jade files within watch task
-gulp.task('jade:changed', function() {
-	return gulp.src(paths.theme.jade + '/*.jade')
+gulp.task('jade:main:changed', function() {
+	return gulp.src(paths.dev.jade + '/*.jade')
 		.pipe(plumber())
-		.pipe(changed(paths.theme.html, {extension: '.html'}))
+		.pipe(changed(paths.build.html, {extension: '.html'}))
 		.pipe(data(function(file) {
-			return { 'config': JSON.parse(fs.readFileSync(paths.theme.data + '/config.json'))}
+			return { 'config': JSON.parse(fs.readFileSync(paths.dev.data + '/config.json'))}
 		}))
 		.pipe(jade({
 			client: false,
@@ -38,5 +38,5 @@ gulp.task('jade:changed', function() {
 		}).on('error', function(err) {
 			console.log(err);
 		}))
-		.pipe(gulp.dest(paths.theme.html));
+		.pipe(gulp.dest(paths.build.html));
 });

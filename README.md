@@ -41,7 +41,7 @@ Template with cms adjusted structure, based on [front-end-scaffold](https://gith
 |
 └── theme/                                     * main theme folder
 	├── index.html
-	├── page.html
+	├── page-name.html
 	└── static/                                * static assets
 		├── css/                               * compiled css
 		|
@@ -49,10 +49,12 @@ Template with cms adjusted structure, based on [front-end-scaffold](https://gith
 		|
 		├── jade/                              * templates
 		|	├── blocks/                        * blocks library
-		│   |   └── block.jade
+		│   |   └── block-name.jade
 		│   ├── helpers/                       * helper mixins
+		│   ├── vendor/                        * third-party code
 		│   ├── layouts/                       * page layouts
-		│   └── page.jade
+		│   ├── index.jade
+		│   └── page-name.jade
 		|
 		├── js/                                * scripts
 		|   ├── vendor/                        * vendor scripts library
@@ -61,15 +63,13 @@ Template with cms adjusted structure, based on [front-end-scaffold](https://gith
 		|
 		├── sass/                              * sass preprocessor styles
 		|	├── blocks/                        * blocks library
-		│   |   └── block.sass
+		│   |   └── block-name.sass
 		|   ├── helpers/                       * mixins and vars
 		│   ├── vendor/                        * third-party code
 		|   ├── custom.sass
 		|   └── screen.sass
 		|
 		├── helpers/                           * additional resources
-		|	├── index.html                     * Project page-list
-		|	├── index_bg.jpg
 		|	└── favicon.ico
 		|
 		├── fonts/                             * font sources
@@ -138,7 +138,6 @@ Build task.
 Gulp: `gulp build`
 
 * Minify images
-* Apply styleguide to stylesheets
 * Minify javascript files
 * Minify stylesheets
 * Run BrowserSync static server
@@ -155,7 +154,6 @@ Gulp: `gulp rebuild`
 * Compile Jade templates
 * Sync helpers and other assets
 * Minify images
-* Apply styleguide to stylesheets
 * Minify javascript files
 * Minify stylesheets
 
