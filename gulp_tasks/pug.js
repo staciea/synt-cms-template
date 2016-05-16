@@ -23,7 +23,7 @@ var gulp = require('gulp'),
 
 //Compile *.pug files
 gulp.task('pug:main', function() {
-	return gulp.src([paths.dev.jade + '/pages/*.jade', paths.dev.pug + '/pages/*.pug'])
+	return gulp.src([paths.dev.jade + '/*.jade', paths.dev.pug + '/*.pug'])
 		.pipe(plumber())
 		.pipe(data(dataObject))
 		.pipe(pug({
@@ -37,7 +37,7 @@ gulp.task('pug:main', function() {
 
 //Compile *.pug files within watch task
 gulp.task('pug:main:changed', function() {
-	return gulp.src([paths.dev.jade + '/pages/*.jade', paths.dev.pug + '/pages/*.pug'])
+	return gulp.src([paths.dev.jade + '/*.jade', paths.dev.pug + '/*.pug'])
 		.pipe(plumber())
 		.pipe(changed(paths.build.html, {extension: '.html'}))
 		.pipe(data(dataObject))
