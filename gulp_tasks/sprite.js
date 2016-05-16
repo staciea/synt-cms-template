@@ -17,7 +17,7 @@ gulp.task('sprite:main', function () {
 			cssName: 'sprite.css',
 			algorithm: 'left-right',
 			algorithmOpts: {sort: false},
-			padding: 1
+			padding: 5
 		}))
 		.pipe(gulp.dest(paths.dev.images + '/sprite'));
 });

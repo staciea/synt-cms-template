@@ -47,14 +47,14 @@ Template with cms adjusted structure, based on [front-end-scaffold](https://gith
 		|
 		├── images/                            * image sources
 		|
-		├── jade/                              * templates
+		├── pug/                               * templates
 		|	├── blocks/                        * blocks library
-		│   |   └── block-name.jade
+		│   |   └── block-name.pug
 		│   ├── helpers/                       * helper mixins
 		│   ├── vendor/                        * third-party code
 		│   ├── layouts/                       * page layouts
-		│   ├── index.jade
-		│   └── page-name.jade
+		│   ├── index.pug
+		│   └── page-name.pug
 		|
 		├── js/                                * scripts
 		|   ├── vendor/                        * vendor scripts library
@@ -105,8 +105,9 @@ Also `bower install` included into `start` task using shell plugin. It will inst
 * "jquery"
 
 ## Site configuration
-This boilerplate use Jade templates with external data configs. 
-Main settings can be found in `dev/data/config.json` file. And they're available for usage in templates with `config.key-name`
+This boilerplate use Pug templates with external data configs. 
+Main settings can be found in `dev/data/config.json` file. And they're available for usage in templates with `config.key-name`.
+Just place your own `filename.json` into the `data` folder, Pug compiler will load it and you'll be able to use `filename.key-name` within your templates.
 
 ## Tasks
 Here comes groups of grunt and gulp tasks with some explanations
@@ -127,7 +128,7 @@ Gulp: `gulp dev`
 * Compile Sass stylesheets
 * Add vendor prefixes in css
 * Combine media queries in css files
-* Compile Jade templates
+* Compile Pug templates
 * Sync helpers and other assets
 * Run BrowserSync static server with live reload using 
 * Watch for changes and run dev task
@@ -151,7 +152,7 @@ Gulp: `gulp rebuild`
 * Compile Sass stylesheets
 * Add vendor prefixes in css
 * Combine media queries in css files
-* Compile Jade templates
+* Compile Pug templates
 * Sync helpers and other assets
 * Minify images
 * Minify javascript files

@@ -17,7 +17,7 @@ gulp.task('dev', function() {
 		'rigger:main',
 		'sass:main',
 		'postcss:dev',
-		'jade:main',
+		'pug:main',
 		'sync:helpers',
 		'browserSync:server',
 		'watch'
@@ -40,7 +40,7 @@ gulp.task('rebuild', function() {
 		'rigger:main',
 		'sass:main',
 		'postcss:dev',
-		'jade:main',
+		'pug:main',
 		'sync:helpers',
 		'imagemin:main',
 		'uglify:main',
