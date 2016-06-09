@@ -1,2 +1,4 @@
-//- Body javascript
-script(src="static/js/body.min.js")
+mixin body-src()
+	//- Body javascript
+	if config.modules.bodyJs
+		script(src="static/js/body.min.js")

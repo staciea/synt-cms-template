@@ -1,14 +1,23 @@
+//- Mixins
+include ../_vendor-list
+
+//- Helpers: meta information, head and body assets src
+include ../_helpers-list
+
+//- Common used mixin-blocks
+include ../_blocks-list
+
 //- This block will be filled with page variables
 block variables
 
 doctype html
-html(lang= config.site.lang)
+html(lang= pageLang ? pageLang : config.site.lang)
 	head
 		//- Meta information
-		include ../helpers/head-meta
+		+head-meta()
 
 		//- Head external resources
-		include ../helpers/head-src
+		+head-src()
 
 		//- Include page specific content
 		block head-content
@@ -18,4 +27,4 @@ html(lang= config.site.lang)
 		block body-content
 
 		//- Body assets
-		include ../helpers/body-src
+		+body-src()

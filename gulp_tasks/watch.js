@@ -43,8 +43,8 @@ gulp.task('watch', function() {
 
 	gulp.watch(
 		[
-			paths.dev.pug + '/*.pug',
-			paths.dev.jade + '/*.jade'
+			paths.dev.pug + '/pages/*.pug',
+			paths.dev.jade + '/pages/*.jade'
 		],
 		function() {
 			runSequence(
