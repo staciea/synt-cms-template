@@ -53,8 +53,7 @@ Template with cms adjusted structure, based on [front-end-scaffold](https://gith
 		│   ├── helpers/                       * helper mixins
 		│   ├── vendor/                        * third-party code
 		│   ├── layouts/                       * page layouts
-		│   ├── index.pug
-		│   └── page-name.pug
+		│   └── pages/                         * main pages templates
 		|
 		├── js/                                * scripts
 		|   ├── vendor/                        * vendor scripts library
@@ -167,9 +166,9 @@ Gulp: `gulp server`
 
 #### Sprite 
 Sprite creation task. Should be configured before running.
-Gulp: `gulp sprite`
+Gulp: `gulp sprite:main`
 
-* Create images sprite and related css
+* Create images sprite and related sass files
 
 
 ## Live reload  
