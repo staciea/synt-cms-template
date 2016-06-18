@@ -26,6 +26,7 @@ gulp.task('watch', function() {
 			runSequence(
 			'sass:main:changed',
 			'postcss:dev',
+			'cmq:main',
 			'browserSync:reload'
 			);
 		}

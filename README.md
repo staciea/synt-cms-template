@@ -53,7 +53,7 @@ Template with cms adjusted structure, based on [front-end-scaffold](https://gith
 		│   ├── helpers/                       * helper mixins
 		│   ├── vendor/                        * third-party code
 		│   ├── layouts/                       * page layouts
-		│   └── pages/                         * main pages templates
+		│   └── pages/                         * page templates
 		|
 		├── js/                                * scripts
 		|   ├── vendor/                        * vendor scripts library
