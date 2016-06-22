@@ -18,8 +18,7 @@ gulp.task('postcss:dev', function () {
 				'Safari >= 5'
 			],
 			cascade: true
-		}),
-		cmq({sort: true})
+		})
 	];
 	return gulp.src(paths.build.css + '/*.min.css')
 		.pipe(plumber())
