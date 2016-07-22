@@ -21,10 +21,10 @@ gulp.task('watch', function() {
 	);
 
 	gulp.watch(
-		paths.dev.sass + '/*.{sass,scss}',
+		paths.dev.sass + '/**/*.{sass,scss}',
 		function() {
 			runSequence(
-			'sass:main:changed',
+			'sass:main',
 			'postcss:dev',
 			'cmq:main',
 			'browserSync:reload'
